@@ -1,0 +1,63 @@
+import React from "react";
+import { Flex, HStack, Icon, Image, Text } from "@chakra-ui/react";
+import Link from "next/link";
+import NextImage from "next/image";
+import { ROUTES } from "@/constants/routes";
+import logo from "../../../public/logo-icon.png";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+const Footer = () => {
+  const SOCIALS = [
+    {
+      label: "GitHub",
+      href: "https://github.com/gidiblack",
+      icon: FaGithub,
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/gideon-etim-6534a7187/",
+      icon: FaLinkedin,
+    },
+    {
+      label: "Twitter",
+      href: "https://x.com/tha_Gidi",
+      icon: FaTwitter,
+    },
+  ];
+  return (
+    <Flex
+      as="footer"
+      w="full"
+      flexDir={["column", null, "row"]}
+      px={[5, null, 6, 8, 10]}
+      py={[4, null, 5, 6]}
+      gap={[2, null, 0]}
+      justifyContent="space-between"
+      alignItems="center"
+      bg="#16191C"
+      border={"1px solid #1E293B"}>
+      <Link href={ROUTES.home}>
+        <HStack gap={0.5}>
+          <Image asChild boxSize={{ base: 3, md: 4 }} position={"relative"} objectFit={"contain"}>
+            <NextImage src={logo.src} alt="gideon's logo" width={24} height={24} />
+          </Image>
+          <Text fontSize={[12, null, 13, 14]} fontWeight={"bold"} color={"#DE9E2C"}>
+            Gideon E.
+          </Text>
+        </HStack>
+      </Link>
+      <Text fontSize={[12, null, 13, 14]} color={"#64748B"}>
+        &copy; {new Date().getFullYear()} Gideon Etim, All rights reserved.
+      </Text>
+      <HStack gap={4}>
+        {SOCIALS.map((social) => (
+          <Link key={social.label} href={social.href} target="_blank" rel="noopener noreferrer">
+            <Icon as={social.icon} boxSize={4} color={"#64748B"} />
+          </Link>
+        ))}
+      </HStack>
+    </Flex>
+  );
+};
+
+export default Footer;
