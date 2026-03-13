@@ -92,7 +92,7 @@ const Navbar = () => {
         w={"full"}
         border={"1px solid #1E293B"}
         boxShadow={"xs"}
-        bg={scrolled ? "transparent" : "#16191C"}
+        bg={scrolled ? "#16191C" : "transparent"}
         px={[5, null, 6, 8, 10]}
         py={[2.5, null, 3, 4]}
         justifyContent={"space-between"}
@@ -113,16 +113,18 @@ const Navbar = () => {
           ))}
         </HStack>
         <HStack>
-          <Button
-            bgColor={"#DE9E2C"}
-            fontSize={[12, null, 13, 14]}
-            fontWeight={"bold"}
-            borderRadius={12}
-            color={"#1F2937"}
-            px={[5, null, 6]}
-            py={[1.5, null, 2]}>
-            Hire Me
-          </Button>
+          <Link href={ROUTES.hireme} display={{ base: "none", md: "inline-flex" }}>
+            <Button
+              bgColor={"#DE9E2C"}
+              fontSize={[12, null, 13, 14]}
+              fontWeight={"bold"}
+              borderRadius={12}
+              color={"#1F2937"}
+              px={[5, null, 6]}
+              py={[1.5, null, 2]}>
+              Hire Me
+            </Button>
+          </Link>
           <Flex
             onClick={onToggle}
             display={["inline-flex", null, "none"]}
@@ -160,16 +162,18 @@ const Navbar = () => {
                   </Text>
                 </HStack>
               </Link>
-              <Button
-                bgColor={"#DE9E2C"}
-                fontSize={[12, null, 13, 14]}
-                fontWeight={"bold"}
-                borderRadius={12}
-                color={"#1F2937"}
-                px={[5, null, 6]}
-                py={[1.5, null, 2]}>
-                Hire Me
-              </Button>
+              <Link href={ROUTES.hireme} display={{ base: "inline-flex", md: "none" }}>
+                <Button
+                  bgColor={"#DE9E2C"}
+                  fontSize={[12, null, 13, 14]}
+                  fontWeight={"bold"}
+                  borderRadius={12}
+                  color={"#1F2937"}
+                  px={[5, null, 6]}
+                  py={[1, null, 2]}>
+                  Hire Me
+                </Button>
+              </Link>
             </Flex>
             <Drawer.CloseTrigger asChild top={2} right={3} color={"#F1F5F9"} aria-label={"Close navigation menu"}>
               <Button variant={"ghost"} minW={"auto"} p={1}>
