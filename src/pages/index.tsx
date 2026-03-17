@@ -13,7 +13,7 @@ export default function Home() {
     <PageWrapper title="Homepage" description="Welcome to my portfolio website">
       {/* Hero Section */}
       <PageSection mt={[8, null, 10, 12]}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} gap={[4, null, 5, 6, 8]} alignItems={"center"}>
+        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={[4, null, 5, 6, 8]} alignItems={"center"}>
           <Stack gap={[3, null, 4]}>
             <Box
               fontSize={12}
@@ -35,16 +35,21 @@ export default function Home() {
               and Mongo DB. I turn complex problems into high-performance digital products.
             </Text>
             <HStack gap={4} pt={10}>
-              <Button variant={"primary"} size={"lg"} px={10} py={4}>
+              <Button variant={"primary"} size={"lg"}>
                 Hire Me
               </Button>
-              <Button variant={"outline"} size={"lg"} px={10} py={4}>
+              <Button variant={"outline"} size={"lg"}>
                 View Projects
               </Button>
             </HStack>
           </Stack>
           <Flex flexDir={"column"} h={"full"} justifyContent={"center"} alignItems={"center"}>
-            <Image src={HeroSnippet.src} w={"30rem"} h={"15rem"} alt={"code snippet with tech stacks and role"} />
+            <Image
+              src={HeroSnippet.src}
+              w={["22rem", null, "24rem", "30rem"]}
+              h={["12rem", null, "15rem"]}
+              alt={"code snippet with tech stacks and role"}
+            />
           </Flex>
         </SimpleGrid>
       </PageSection>
@@ -55,7 +60,10 @@ export default function Home() {
         borderY={"1px solid #1E293B"}
         w={"full"}
         align={"center"}
-        justifyContent={"space-between"}>
+        justifyContent={"space-between"}
+        gapY={[5, null, 4]}
+        gapX={[3, null, 0]}
+        flexWrap={"wrap"}>
         <Stack align={"center"} gap={1}>
           <Text fontSize={30} fontWeight={"black"} color={"#F1F5F9"}>
             6+

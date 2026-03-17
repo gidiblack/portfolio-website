@@ -1,11 +1,23 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { Button, Drawer, Flex, HStack, Icon, Image, Link, Text, useDisclosure, VStack } from "@chakra-ui/react";
+import {
+  Drawer,
+  Flex,
+  HStack,
+  Icon,
+  Image,
+  Link,
+  Text,
+  useDisclosure,
+  VStack,
+  Button as ChakraButton,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import NextImage from "next/image";
 import logo from "../../../public/logo-icon.png";
 import { ROUTES } from "@/constants/routes";
 import useWindowDimensions from "@/helpers/useWindowDimensions";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Button from "../ui/button";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -114,16 +126,7 @@ const Navbar = () => {
         </HStack>
         <HStack>
           <Link href={ROUTES.hireme} display={{ base: "none", md: "inline-flex" }}>
-            <Button
-              bgColor={"#DE9E2C"}
-              fontSize={[12, null, 13, 14]}
-              fontWeight={"bold"}
-              borderRadius={12}
-              color={"#1F2937"}
-              px={[5, null, 6]}
-              py={[1.5, null, 2]}>
-              Hire Me
-            </Button>
+            <Button size={"sm"}>Hire Me</Button>
           </Link>
           <Flex
             onClick={onToggle}
@@ -163,22 +166,13 @@ const Navbar = () => {
                 </HStack>
               </Link>
               <Link href={ROUTES.hireme} display={{ base: "inline-flex", md: "none" }}>
-                <Button
-                  bgColor={"#DE9E2C"}
-                  fontSize={[12, null, 13, 14]}
-                  fontWeight={"bold"}
-                  borderRadius={12}
-                  color={"#1F2937"}
-                  px={[5, null, 6]}
-                  py={[1, null, 2]}>
-                  Hire Me
-                </Button>
+                <Button size={"sm"}>Hire Me</Button>
               </Link>
             </Flex>
             <Drawer.CloseTrigger asChild top={2} right={3} color={"#F1F5F9"} aria-label={"Close navigation menu"}>
-              <Button variant={"ghost"} minW={"auto"} p={1}>
+              <ChakraButton variant={"ghost"} minW={"auto"} p={1}>
                 <Icon as={AiOutlineClose} boxSize={5} />
-              </Button>
+              </ChakraButton>
             </Drawer.CloseTrigger>
 
             <Drawer.Body py={2}>
