@@ -9,6 +9,9 @@ import { HiOutlineDatabase } from "react-icons/hi";
 import { TbBrandReactNative } from "react-icons/tb";
 import ServiceCard from "@/components/cards/ServiceCard";
 import { AiOutlineCode } from "react-icons/ai";
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
+import HomeProjectCard from "@/components/cards/HomeProjectCard";
 
 export default function Home() {
   const services = [
@@ -31,6 +34,21 @@ export default function Home() {
       icon: TbBrandReactNative,
     },
   ];
+
+  const recentProjects = [
+    {
+      title: "E-commerce Platform",
+      description: "A scalable e-commerce platform with real-time inventory management and payment integration.",
+      techStack: ["React", "Node.js", "MongoDB"],
+      imageSrc: "/ecommerce_project.png",
+    },
+    {
+      title: "Social Media App",
+      description: "A feature-rich social media application with real-time chat and media sharing capabilities.",
+      techStack: ["Flutter", "Firebase", "GraphQL"],
+      imageSrc: "/social_media_project.png",
+    },
+  ];
   return (
     <PageWrapper title="Homepage" description="Welcome to my portfolio website">
       {/* Hero Section */}
@@ -50,17 +68,20 @@ export default function Home() {
               AVAILABLE FOR NEW PROJECTS
             </Box>
             <Text fontSize={[56, null, 60, 64, 72]} fontWeight={"black"} color={"#F1F5F9"} lineHeight={"72px"}>
-              I build scalable web solutions.
+              I build{" "}
+              <Text as={"span"} bgGradient={"linear-gradient(0deg, #94A3B8, #F1F5F9)"} bgClip="text">
+                scalable web solutions.
+              </Text>
             </Text>
             <Text fontSize={[15, null, 16, 18]} color={"#94A3B8"}>
               Experienced Front-end Software Engineer specialized in React, TypeScipt, React Native, Node.js, Express,
               and Mongo DB. I turn complex problems into high-performance digital products.
             </Text>
             <HStack gap={4} pt={10}>
-              <Button variant={"primary"} size={"lg"}>
+              <Button variant={"primary"} size={["md", null, "lg"]}>
                 Hire Me
               </Button>
-              <Button variant={"outline"} size={"lg"}>
+              <Button variant={"outline"} size={["md", null, "lg"]}>
                 View Projects
               </Button>
             </HStack>
@@ -154,6 +175,36 @@ export default function Home() {
         </SimpleGrid>
       </PageSection>
       {/* Projects Section */}
+      <PageSection>
+        <Flex flexDir={["column", null, "row"]} align={"end"} justifyContent={"space-between"}>
+          <Box>
+            <Text fontSize={[28, null, 32, 36]} fontWeight={"black"} color={"#F1F5F9"}>
+              Recent Projects
+            </Text>
+            <Text fontSize={[14, null, 15, 16]} color={"#94A3B8"}>
+              A collection of technical solutions built with precision and modern best practices.
+            </Text>
+          </Box>
+          <Link href={"/projects"}>
+            <HStack>
+              <Text color={"#F1F5F9"} fontWeight={"medium"}>
+                View All
+              </Text>
+              <Icon as={GoArrowRight} color={"#F1F5F9"} boxSize={[3, null, 4]} />
+            </HStack>
+          </Link>
+        </Flex>
+        <SimpleGrid columns={{ base: 1, md: 2 }} gap={[5, null, 6, 8]} mt={[10, null, 12, 14, 16]}>
+          {recentProjects.map((project, index) => (
+            <HomeProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              techStack={project.techStack}
+            />
+          ))}
+        </SimpleGrid>
+      </PageSection>
     </PageWrapper>
   );
 }
