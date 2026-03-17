@@ -4,11 +4,33 @@ import PageWrapper from "@/components/layout/PageWrapper";
 import Button from "@/components/ui/button";
 import HeroSnippet from "@/assets/stack-snippet.png";
 import { RiFlutterFill, RiNextjsFill } from "react-icons/ri";
-import { FaReact } from "react-icons/fa";
+import { FaFigma, FaReact } from "react-icons/fa";
 import { HiOutlineDatabase } from "react-icons/hi";
 import { TbBrandReactNative } from "react-icons/tb";
+import ServiceCard from "@/components/cards/ServiceCard";
+import { AiOutlineCode } from "react-icons/ai";
 
 export default function Home() {
+  const services = [
+    {
+      title: "Web Development",
+      description: "Building responsive and high-performance web applications using modern technologies.",
+      features: ["Custom web app development", "Progressive Web Apps (PWA)", "API integration"],
+      icon: AiOutlineCode,
+    },
+    {
+      title: "UI/UX Design",
+      description: "Crafting intuitive and engaging user interfaces that enhance user experience.",
+      features: ["User research and personas", "Wireframing and prototyping", "Visual design"],
+      icon: FaFigma,
+    },
+    {
+      title: "Mobile App Development",
+      description: "Creating cross-platform mobile applications with seamless performance and native feel.",
+      features: ["React Native development", "Flutter development", "App store deployment"],
+      icon: TbBrandReactNative,
+    },
+  ];
   return (
     <PageWrapper title="Homepage" description="Welcome to my portfolio website">
       {/* Hero Section */}
@@ -111,6 +133,27 @@ export default function Home() {
           </Text>
         </HStack>
       </Flex>
+      {/* Services Section */}
+      <PageSection>
+        <Text fontSize={[28, null, 32, 36]} fontWeight={"black"} color={"#F1F5F9"} textAlign={"center"}>
+          Comprehensive Development Services
+        </Text>
+        <Text fontSize={[14, null, 15, 16]} color={"#94A3B8"} textAlign={"center"}>
+          Tailored solutions designed to solve complex business challenges through modern technology.
+        </Text>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={[5, null, 6, 8]} mt={[10, null, 12, 14, 16]}>
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              features={service.features}
+              icon={service.icon}
+            />
+          ))}
+        </SimpleGrid>
+      </PageSection>
+      {/* Projects Section */}
     </PageWrapper>
   );
 }
