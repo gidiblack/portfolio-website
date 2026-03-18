@@ -224,7 +224,7 @@ export default function Home() {
           <Text fontSize={[16, null, 17, 18]} color={"#CBD5E1"} w={["full", null, "90%", "80%", "75%"]}>
             Let's discuss your project requirements and how we can turn your vision into a production-ready reality.
           </Text>
-          <Button variant={"white"} size={"xl"}>
+          <Button variant={"primary"} size={"lg"}>
             Hire Me
           </Button>
         </Stack>
