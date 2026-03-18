@@ -5,7 +5,7 @@ import { MdOutlineCheckCircle } from "react-icons/md";
 interface ServiceCardProps {
   title: string;
   description: string;
-  features: string[];
+  features?: string[];
   icon: React.ElementType;
 }
 
@@ -22,16 +22,18 @@ const ServiceCard = ({ title, description, features, icon }: ServiceCardProps) =
         <Text fontSize={[12, null, 13, 14]} color={"#94A3B8"}>
           {description}
         </Text>
-        <Stack>
-          {features.map((feature, index) => (
-            <HStack key={index}>
-              <Icon as={MdOutlineCheckCircle} color={"#22C55E"} />
-              <Text fontSize={[12, null, 13, 14]} fontWeight={"medium"} color={"#F1F5F9"}>
-                {feature}
-              </Text>
-            </HStack>
-          ))}
-        </Stack>
+        {features && (
+          <Stack>
+            {features.map((feature, index) => (
+              <HStack key={index}>
+                <Icon as={MdOutlineCheckCircle} color={"#22C55E"} />
+                <Text fontSize={[12, null, 13, 14]} fontWeight={"medium"} color={"#F1F5F9"}>
+                  {feature}
+                </Text>
+              </HStack>
+            ))}
+          </Stack>
+        )}
       </Stack>
     </Box>
   );

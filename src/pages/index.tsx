@@ -156,7 +156,7 @@ export default function Home() {
         </HStack>
       </Flex>
       {/* Services Section */}
-      <PageSection>
+      <PageSection id={"services"}>
         <Text fontSize={[28, null, 32, 36]} fontWeight={"black"} color={"#F1F5F9"} textAlign={"center"}>
           Comprehensive Development Services
         </Text>
@@ -176,7 +176,7 @@ export default function Home() {
         </SimpleGrid>
       </PageSection>
       {/* Projects Section */}
-      <PageSection>
+      <PageSection id={"projects"}>
         <Flex flexDir={["column", null, "row"]} align={"end"} justifyContent={"space-between"}>
           <Box>
             <Text fontSize={[28, null, 32, 36]} fontWeight={"black"} color={"#F1F5F9"}>
