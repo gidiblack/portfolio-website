@@ -63,8 +63,8 @@ const Navbar = () => {
       href: ROUTES.home,
     },
     {
-      label: "Products",
-      href: ROUTES.products,
+      label: "Projects",
+      href: ROUTES.projects,
     },
     {
       label: "Services",

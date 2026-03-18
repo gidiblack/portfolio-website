@@ -12,6 +12,7 @@ import { AiOutlineCode } from "react-icons/ai";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import HomeProjectCard from "@/components/cards/HomeProjectCard";
+import { ROUTES } from "@/constants/routes";
 
 export default function Home() {
   const services = [
@@ -185,7 +186,7 @@ export default function Home() {
               A collection of technical solutions built with precision and modern best practices.
             </Text>
           </Box>
-          <Link href={"/projects"}>
+          <Link href={ROUTES.projects}>
             <HStack>
               <Text color={"#F1F5F9"} fontWeight={"medium"}>
                 View All
@@ -204,6 +205,29 @@ export default function Home() {
             />
           ))}
         </SimpleGrid>
+      </PageSection>
+      {/* CTA */}
+      <PageSection>
+        <Stack
+          borderRadius={24}
+          bgGradient={"linear-gradient(25deg, #1E293B, #0F172A)"}
+          py={[10, null, 14, 16, 20]}
+          px={[8, null, 10, 12, 14]}
+          gap={[4, null, 5, 6]}
+          maxW={"60rem"}
+          mx={"auto"}
+          textAlign={"center"}
+          align={"center"}>
+          <Text fontSize={[32, null, 36, 40, 44]} fontWeight={"black"} color={"#F1F5F9"}>
+            Ready to build something impactful?
+          </Text>
+          <Text fontSize={[16, null, 17, 18]} color={"#CBD5E1"} w={["full", null, "90%", "80%", "75%"]}>
+            Let's discuss your project requirements and how we can turn your vision into a production-ready reality.
+          </Text>
+          <Button variant={"white"} size={"xl"}>
+            Hire Me
+          </Button>
+        </Stack>
       </PageSection>
     </PageWrapper>
   );
