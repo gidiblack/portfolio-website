@@ -59,6 +59,7 @@ const HireMePage = () => {
     website: "",
     location: "",
     projectType: "",
+    projectStatus: "",
     budget: "",
     timeline: "",
     targetAudience: "",
@@ -101,6 +102,10 @@ const HireMePage = () => {
       newErrors.projectType = "Project type is required";
     }
 
+    if (!formData.projectStatus) {
+      newErrors.projectStatus = "Project status is required";
+    }
+
     if (!formData.budget.trim()) {
       newErrors.budget = "Budget is required";
     }
@@ -111,10 +116,6 @@ const HireMePage = () => {
 
     if (!formData.targetAudience.trim()) {
       newErrors.targetAudience = "Target audience is required";
-    }
-
-    if (!formData.details.trim()) {
-      newErrors.details = "Project details are required";
     }
 
     if (formData.website && !validateUrl(formData.website)) {
@@ -144,6 +145,7 @@ const HireMePage = () => {
         website: formData.website || "Not provided",
         location: formData.location,
         projectType: formData.projectType,
+        projectStatus: formData.projectStatus,
         budget: formData.budget,
         timeline: formData.timeline,
         targetAudience: formData.targetAudience,
@@ -159,6 +161,7 @@ const HireMePage = () => {
         website: "",
         location: "",
         projectType: "",
+        projectStatus: "",
         budget: "",
         timeline: "",
         targetAudience: "",
@@ -376,19 +379,54 @@ const HireMePage = () => {
                       <option value="" style={{ color: "#6B7280" }}>
                         Select a project type
                       </option>
-                      <option value="UI/UX design" style={{ color: "#111827" }}>
+                      <option value="UI/UX design" style={{ color: "#F1F5F9" }}>
                         UI/UX Design
                       </option>
-                      <option value="website development" style={{ color: "#111827" }}>
+                      <option value="website development" style={{ color: "#F1F5F9" }}>
                         Website Development
                       </option>
-                      <option value="mobile app development" style={{ color: "#111827" }}>
+                      <option value="mobile app development" style={{ color: "#F1F5F9" }}>
                         Mobile App Development
                       </option>
                     </NativeSelect.Field>
                     <NativeSelect.Indicator color="#94A3B8" />
                   </NativeSelect.Root>
                   <Field.ErrorText color="#EF4444">{errors.projectType}</Field.ErrorText>
+                </Field.Root>
+                {/* New / Existing Field */}
+                <Field.Root invalid={!!errors.projectStatus} required>
+                  <Field.Label color="#F1F5F9" fontWeight="600">
+                    New / Existing *
+                  </Field.Label>
+                  <NativeSelect.Root>
+                    <NativeSelect.Field
+                      name="projectStatus"
+                      value={formData.projectStatus}
+                      onChange={handleChange}
+                      bgColor="#1E293B"
+                      borderColor="#334155"
+                      color="#F1F5F9"
+                      _focus={{
+                        bgColor: "#1E293B",
+                        borderColor: "#94A3B8",
+                        boxShadow: "0 0 0 1px #94A3B8",
+                      }}
+                      _hover={{
+                        borderColor: "#475569",
+                      }}>
+                      <option value="" style={{ color: "#6B7280" }}>
+                        Select one
+                      </option>
+                      <option value="New Project" style={{ color: "#F1F5F9" }}>
+                        New Project
+                      </option>
+                      <option value="Existing Project" style={{ color: "#F1F5F9" }}>
+                        Existing Project
+                      </option>
+                    </NativeSelect.Field>
+                    <NativeSelect.Indicator color="#94A3B8" />
+                  </NativeSelect.Root>
+                  <Field.ErrorText color="#EF4444">{errors.projectStatus}</Field.ErrorText>
                 </Field.Root>
 
                 {/* Budget Field */}
@@ -470,9 +508,9 @@ const HireMePage = () => {
                 </Field.Root>
 
                 {/* Additional Project Details (spans 2 columns on large screens) */}
-                <Field.Root invalid={!!errors.details} required gridColumn={{ base: "1", lg: "1 / -1" }}>
+                <Field.Root invalid={!!errors.details} gridColumn={{ base: "1", lg: "1 / -1" }}>
                   <Field.Label color="#F1F5F9" fontWeight="600">
-                    Project Details *
+                    Additional Details
                   </Field.Label>
                   <Textarea
                     name="details"
