@@ -16,7 +16,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techStack, imageSrc }) => {
   return (
     <Box bgColor={"#0F172A"} borderRadius={12}>
-      <Image asChild h={"20.5rem"} w={"full"}>
+      <Image asChild h={["20.5rem", null, "15rem", "18rem", "20.5rem"]} w={"full"}>
         <NextImage src={imageSrc || placeholder.src} alt={title} width={590} height={332} objectFit="cover" />
       </Image>
       <Box p={[5, null, 6, 7, 8]}>

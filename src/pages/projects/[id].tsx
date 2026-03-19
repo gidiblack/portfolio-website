@@ -88,7 +88,7 @@ const ProjectDetails = () => {
               A high-performance fintech solution revolutionizing real-time transaction monitoring for enterprise-scale
               global commerce.
             </Text>
-            <HStack gap={4} pt={[6, null, 8, 9, 10]}>
+            <HStack gap={[3, null, 4]} pt={[4, null, 6, 7, 8, 10]}>
               <Button variant={"white"} size={["md", null, "lg"]}>
                 <Icon as={IoMdOpen} boxSize={4} color={"#1F2937"} mr={1} mb={1} />
                 View Live Demo
@@ -110,7 +110,7 @@ const ProjectDetails = () => {
         </SimpleGrid>
         <SimpleGrid
           columns={{ base: 1, md: 2, lg: 4 }}
-          gap={[6, null, 5, 4]}
+          gap={[3, null, 4]}
           mt={[8, null, 10, 12, 16]}
           alignItems={"center"}>
           {projectData.overview.map((item, index) => (
@@ -165,7 +165,7 @@ const ProjectDetails = () => {
         <Text fontSize={[22, null, 24, 28, 30]} fontWeight={"bold"} color={"#F1F5F9"}>
           The Engine Under the Hood
         </Text>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={[6, null, 8, 9, 10]} mt={[6, null, 8, 10]}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={[4, null, 6, 8, 9, 10]} mt={[6, null, 8, 10]}>
           {projectData.engine.map((item, index) => (
             <Flex
               key={index}

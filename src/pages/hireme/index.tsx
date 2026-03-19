@@ -188,7 +188,7 @@ const HireMePage = () => {
         <SimpleGrid columns={{ base: 1, lg: 2 }} gap={[4, null, 5, 6, 8]} alignItems={"center"}>
           <Stack gap={[3, null, 4]}>
             <Box
-              fontSize={12}
+              fontSize={[10, null, 12]}
               fontWeight={"bold"}
               color={"#CBD5E1"}
               bgColor={"#F1F5F910"}
@@ -199,7 +199,11 @@ const HireMePage = () => {
               border={"1px solid #334155"}>
               AVAILABLE FOR NEW PROJECTS
             </Box>
-            <Text fontSize={[56, null, 60, 64, 72]} fontWeight={"black"} color={"#F1F5F9"} lineHeight={"72px"}>
+            <Text
+              fontSize={[56, null, 60, 64, 72]}
+              fontWeight={"black"}
+              color={"#F1F5F9"}
+              lineHeight={["56px", null, "60px", "64px", "72px"]}>
               I build{" "}
               <Text as={"span"} bgGradient={"linear-gradient(0deg, #94A3B8, #F1F5F9)"} bgClip="text">
                 scalable web solutions
@@ -210,12 +214,12 @@ const HireMePage = () => {
               I bridge the gap between complex engineering and business goals. Let's turn your vision into a
               high-performing digital reality with reliable, future-proof code.
             </Text>
-            <HStack gap={4} pt={10}>
-              <Button variant={"secondary"} size={["md", null, "lg"]}>
+            <HStack gap={[3, null, 4]} pt={[4, null, 6, 7, 8, 10]}>
+              <Button variant={"secondary"} size={["sm", null, "md", "lg"]}>
                 <Icon as={BiDownload} boxSize={5} color={"#F1F5F9"} mr={2} />
                 Download Resume
               </Button>
-              <Button variant={"outline"} size={["md", null, "lg"]}>
+              <Button variant={"outline"} size={["sm", null, "md", "lg"]}>
                 View Projects
               </Button>
             </HStack>
@@ -223,8 +227,8 @@ const HireMePage = () => {
           <Flex flexDir={"column"} h={"full"} justifyContent={"center"} alignItems={"center"}>
             <Image
               src={HeroSnippet.src}
-              w={["22rem", null, "24rem", "30rem"]}
-              h={["12rem", null, "15rem"]}
+              w={"full"}
+              h={["20rem", null, "21.5rem", "22.5rem", "24rem"]}
               alt={"code snippet with tech stacks and role"}
             />
           </Flex>

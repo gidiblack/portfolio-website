@@ -57,7 +57,7 @@ export default function Home() {
         <SimpleGrid columns={{ base: 1, lg: 2 }} gap={[4, null, 5, 6, 8]} alignItems={"center"}>
           <Stack gap={[3, null, 4]}>
             <Box
-              fontSize={12}
+              fontSize={[10, null, 11, 12]}
               fontWeight={"bold"}
               color={"#CBD5E1"}
               bgColor={"#F1F5F910"}
@@ -68,7 +68,11 @@ export default function Home() {
               border={"1px solid #334155"}>
               AVAILABLE FOR NEW PROJECTS
             </Box>
-            <Text fontSize={[56, null, 60, 64, 72]} fontWeight={"black"} color={"#F1F5F9"} lineHeight={"72px"}>
+            <Text
+              fontSize={[56, null, 60, 64, 72]}
+              fontWeight={"black"}
+              color={"#F1F5F9"}
+              lineHeight={["56px", null, "60px", "64px", "72px"]}>
               I build{" "}
               <Text as={"span"} bgGradient={"linear-gradient(0deg, #94A3B8, #F1F5F9)"} bgClip="text">
                 scalable web solutions.
@@ -78,7 +82,7 @@ export default function Home() {
               Experienced Front-end Software Engineer specialized in React, TypeScipt, React Native, Node.js, Express,
               and Mongo DB. I turn complex problems into high-performance digital products.
             </Text>
-            <HStack gap={4} pt={10}>
+            <HStack gap={[3, null, 4]} pt={[4, null, 6, 8, 10]}>
               <Button variant={"primary"} size={["md", null, "lg"]}>
                 Hire Me
               </Button>
@@ -90,8 +94,8 @@ export default function Home() {
           <Flex flexDir={"column"} h={"full"} justifyContent={"center"} alignItems={"center"}>
             <Image
               src={HeroSnippet.src}
-              w={["22rem", null, "24rem", "30rem"]}
-              h={["12rem", null, "15rem"]}
+              w={["22rem", null, "28rem", "30rem"]}
+              h={["12rem", null, "16rem", "15rem"]}
               alt={"code snippet with tech stacks and role"}
             />
           </Flex>
@@ -218,13 +222,13 @@ export default function Home() {
           mx={"auto"}
           textAlign={"center"}
           align={"center"}>
-          <Text fontSize={[32, null, 36, 40, 44]} fontWeight={"black"} color={"#F1F5F9"}>
+          <Text fontSize={[28, null, 36, 40, 44]} fontWeight={"black"} color={"#F1F5F9"}>
             Ready to build something impactful?
           </Text>
           <Text fontSize={[16, null, 17, 18]} color={"#CBD5E1"} w={["full", null, "90%", "80%", "75%"]}>
             Let's discuss your project requirements and how we can turn your vision into a production-ready reality.
           </Text>
-          <Button variant={"primary"} size={"lg"}>
+          <Button variant={"primary"} size={["md", null, "lg"]}>
             Hire Me
           </Button>
         </Stack>
