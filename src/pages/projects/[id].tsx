@@ -3,74 +3,42 @@ import PageSection from "@/components/layout/PageSection";
 import PageWrapper from "@/components/layout/PageWrapper";
 import { Box, HStack, SimpleGrid, Stack, Text, Flex, Image, Icon } from "@chakra-ui/react";
 import Button from "@/components/ui/button";
-import HeroSnippet from "@/assets/project_placeholder.png";
 import { FaCode, FaMicrochip } from "react-icons/fa6";
 import { IoMdOpen } from "react-icons/io";
 import { MdErrorOutline } from "react-icons/md";
 import { TbRosetteDiscountCheck } from "react-icons/tb";
-import { BsTypescript } from "react-icons/bs";
+import { BsGear, BsTypescript } from "react-icons/bs";
 import { AiFillDatabase } from "react-icons/ai";
-
-const projectData = {
-  id: "balloon-landing-page",
-  title: "Balloon Landing Page",
-  description:
-    "A high-performance fintech solution revolutionizing real-time transaction monitoring for enterprise-scale global commerce.",
-  techStack: ["Next.js", "TypeScript"],
-  liveDemoLink: "https://example.com/live-demo",
-  githubRepoLink: "https://github.com/example/balloon-landing-page",
-  overview: [
-    {
-      label: "Role",
-      value: "Frontend Developer",
-    },
-    {
-      label: "Client",
-      value: "ETAP Digital",
-    },
-    {
-      label: "Timeline",
-      value: "3 months",
-    },
-    {
-      label: "Tech Stack",
-      value: "Next.js, TypeScript",
-    },
-  ],
-  challenge: "",
-  solution: "",
-  engine: [
-    {
-      label: "Frontend Logic",
-      value: "Next.js, TypeScript",
-      icon: BsTypescript,
-    },
-    {
-      label: "API Integration",
-      value: "Node.js",
-      icon: FaMicrochip,
-    },
-    {
-      label: "Database",
-      value: "AWS",
-      icon: AiFillDatabase,
-    },
-  ],
-};
+import { allProjects } from "@/constants";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { ROUTES } from "@/constants/routes";
 
 const ProjectDetails = () => {
+  const { query } = useRouter();
+  const projectId = query.id as string;
+  const projectData = allProjects.find((project) => project.id === projectId);
+
+  if (!projectData) {
+    return (
+      <PageWrapper title={"Project Not Found"} description={"The project you are looking for does not exist."}>
+        <PageSection>
+          <Text fontSize={24} fontWeight={"bold"} color={"#F1F5F9"}>
+            Project Not Found
+          </Text>
+        </PageSection>
+      </PageWrapper>
+    );
+  }
+
   return (
-    <PageWrapper
-      title={"Project Title"}
-      description={
-        "Detailed information about the project, including its features, technologies used, and the impact it has made."
-      }>
+    <PageWrapper title={projectData.title} description={projectData.description}>
       {/* Hero Section */}
       <PageSection mt={[8, null, 10, 12]}>
         <SimpleGrid columns={{ base: 1, lg: 2 }} gap={[5, null, 6, 8, 10]} alignItems={"center"}>
           <Stack gap={[3, null, 4]}>
-            <Box
-              fontSize={12}
+            <Flex
+              fontSize={[10, null, 11, 12]}
               fontWeight={"bold"}
               color={"#F1F5F9"}
               bgColor={"#1E293B"}
@@ -78,33 +46,41 @@ const ProjectDetails = () => {
               py={1}
               borderRadius={"full"}
               w={"fit-content"}
+              align={"center"}
+              gap={2}
               border={"1px solid #334155"}>
+              <Box boxSize={[2, null, 2.5]} borderRadius={"full"} bgColor={"#22C55E"} />
               FEATURED PROJECT
-            </Box>
+            </Flex>
             <Text fontSize={[56, null, 60, 64, 72]} fontWeight={"black"} color={"#F1F5F9"} lineHeight={"72px"}>
-              Balloon Landing Page
+              {projectData.title}
             </Text>
             <Text fontSize={[15, null, 16, 18]} color={"#94A3B8"}>
-              A high-performance fintech solution revolutionizing real-time transaction monitoring for enterprise-scale
-              global commerce.
+              {projectData.description}
             </Text>
             <HStack gap={[3, null, 4]} pt={[4, null, 6, 7, 8, 10]}>
-              <Button variant={"white"} size={["md", null, "lg"]}>
-                <Icon as={IoMdOpen} boxSize={4} color={"#1F2937"} mr={1} mb={1} />
-                View Live Demo
-              </Button>
-              <Button variant={"outline"} size={["md", null, "lg"]}>
-                <Icon as={FaCode} boxSize={4} color={"#F1F5F9"} mr={1} mb={1} />
-                Github Repo
-              </Button>
+              <Link href={projectData.liveDemoLink} target="_blank" rel="noopener noreferrer">
+                <Button variant={"white"} size={["md", null, "lg"]}>
+                  <Icon as={IoMdOpen} boxSize={4} color={"#1F2937"} mr={1} mb={1} />
+                  View Live Demo
+                </Button>
+              </Link>
+              {projectData.githubRepoLink && (
+                <Link href={projectData.githubRepoLink} target="_blank" rel="noopener noreferrer">
+                  <Button variant={"outline"} size={["md", null, "lg"]}>
+                    <Icon as={FaCode} boxSize={4} color={"#F1F5F9"} mr={1} mb={1} />
+                    Github Repo
+                  </Button>
+                </Link>
+              )}
             </HStack>
           </Stack>
           <Flex flexDir={"column"} h={"full"} justifyContent={"center"} alignItems={"center"}>
             <Image
-              src={HeroSnippet.src}
+              src={projectData.thumbnailGif ? projectData.thumbnailGif : projectData.thumbnailImg}
               w={"full"}
-              h={["16rem", null, "18rem", "20rem", "22.5rem", "24rem"]}
-              alt={"code snippet with tech stacks and role"}
+              h={["17.5rem", null, "20rem", "22.5rem", "24rem", "25rem"]}
+              alt={projectData.title}
             />
           </Flex>
         </SimpleGrid>
@@ -140,10 +116,8 @@ const ProjectDetails = () => {
                 The Challenge
               </Text>
             </HStack>
-            <Text mt={[4, null, 5, 6]} fontSize={[14, null, 15, 16]} color={"#94A3B8"}>
-              The client, ETAP Digital, needed a landing page that effectively showcased their fintech solution's
-              capabilities while ensuring optimal performance and user experience. The challenge was to create a
-              visually appealing and informative page that could handle high traffic and provide seamless navigation.
+            <Text mt={[4, null, 5, 6]} fontSize={[14, null, 15, 16]} color={"#94A3B8"} whiteSpace={"pre-line"}>
+              {projectData.challenge}
             </Text>
           </Box>
           <Box>
@@ -153,10 +127,8 @@ const ProjectDetails = () => {
                 The Solution
               </Text>
             </HStack>
-            <Text mt={[4, null, 5, 6]} fontSize={[14, null, 15, 16]} color={"#94A3B8"}>
-              The client, ETAP Digital, needed a landing page that effectively showcased their fintech solution's
-              capabilities while ensuring optimal performance and user experience. The challenge was to create a
-              visually appealing and informative page that could handle high traffic and provide seamless navigation.
+            <Text mt={[4, null, 5, 6]} fontSize={[14, null, 15, 16]} color={"#94A3B8"} whiteSpace={"pre-line"}>
+              {projectData.solution}
             </Text>
           </Box>
         </SimpleGrid>
@@ -180,7 +152,19 @@ const ProjectDetails = () => {
                 boxSize={[8, null, 9, 10]}
                 bgColor={"#3B82F610"}
                 borderRadius={8}>
-                <Icon as={item.icon} color={"#3B82F6"} boxSize={[3, null, 4]} />
+                <Icon
+                  as={
+                    item.label.includes("Frontend")
+                      ? BsTypescript
+                      : item.label.includes("API")
+                        ? FaMicrochip
+                        : item.label.includes("Database")
+                          ? AiFillDatabase
+                          : BsGear
+                  }
+                  color={"#3B82F6"}
+                  boxSize={[3, null, 4]}
+                />
               </Flex>
               <Stack gap={0}>
                 <Text fontSize={[14, null, 15, 16]} color={"#F1F5F9"}>
@@ -203,9 +187,11 @@ const ProjectDetails = () => {
           <Text fontSize={[16, null, 17, 18]} color={"#CBD5E1"} w={["full", null, "90%", "80%", "75%"]}>
             Let's discuss your project requirements and how we can turn your vision into a production-ready reality.
           </Text>
-          <Button variant={"primary"} size={"lg"}>
-            Hire Me
-          </Button>
+          <Link href={ROUTES.hireme}>
+            <Button variant={"primary"} size={"lg"}>
+              Hire Me
+            </Button>
+          </Link>
         </Stack>
       </PageSection>
     </PageWrapper>

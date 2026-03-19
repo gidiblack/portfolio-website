@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["@chakra-ui/react"],
   },
+  images: {
+    remotePatterns: [new URL("https://ik.imagekit.io/gideonimgkit/**")],
+  },
 };
 
 export default nextConfig;

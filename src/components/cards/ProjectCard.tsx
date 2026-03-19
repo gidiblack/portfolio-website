@@ -7,13 +7,14 @@ import { GoArrowRight } from "react-icons/go";
 import Link from "next/link";
 
 interface ProjectCardProps {
+  id: string;
   title: string;
   description: string;
   techStack: string[];
   imageSrc?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techStack, imageSrc }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, techStack, imageSrc }) => {
   return (
     <Box bgColor={"#0F172A"} borderRadius={12}>
       <Image asChild h={["20.5rem", null, "15rem", "18rem", "20.5rem"]} w={"full"}>
@@ -35,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techStack
         <Text fontSize={[14, null, 15, 16]} color={"#94A3B8"}>
           {description}
         </Text>
-        <Link href={"/projects/1"}>
+        <Link href={`/projects/${id}`}>
           <Button variant={"secondary"} size={"sm"} mt={[5, null, 6, 7, 8]}>
             View Details
             <Icon as={GoArrowRight} color={"#F1F5F9"} boxSize={[3, null, 4]} ml={2} />

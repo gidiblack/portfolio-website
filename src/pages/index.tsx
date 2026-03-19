@@ -13,6 +13,7 @@ import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import HomeProjectCard from "@/components/cards/HomeProjectCard";
 import { ROUTES } from "@/constants/routes";
+import { allProjects } from "@/constants";
 
 export default function Home() {
   const services = [
@@ -33,21 +34,6 @@ export default function Home() {
       description: "Creating cross-platform mobile applications with seamless performance and native feel.",
       features: ["React Native development", "Flutter development", "App store deployment"],
       icon: TbBrandReactNative,
-    },
-  ];
-
-  const recentProjects = [
-    {
-      title: "E-commerce Platform",
-      description: "A scalable e-commerce platform with real-time inventory management and payment integration.",
-      techStack: ["React", "Node.js", "MongoDB"],
-      imageSrc: "/ecommerce_project.png",
-    },
-    {
-      title: "Social Media App",
-      description: "A feature-rich social media application with real-time chat and media sharing capabilities.",
-      techStack: ["Flutter", "Firebase", "GraphQL"],
-      imageSrc: "/social_media_project.png",
     },
   ];
   return (
@@ -83,12 +69,16 @@ export default function Home() {
               and Mongo DB. I turn complex problems into high-performance digital products.
             </Text>
             <HStack gap={[3, null, 4]} pt={[4, null, 6, 8, 10]}>
-              <Button variant={"primary"} size={["md", null, "lg"]}>
-                Hire Me
-              </Button>
-              <Button variant={"outline"} size={["md", null, "lg"]}>
-                View Projects
-              </Button>
+              <Link href={ROUTES.hireme}>
+                <Button variant={"primary"} size={["md", null, "lg"]}>
+                  Hire Me
+                </Button>
+              </Link>
+              <Link href={ROUTES.projects}>
+                <Button variant={"outline"} size={["md", null, "lg"]}>
+                  View Projects
+                </Button>
+              </Link>
             </HStack>
           </Stack>
           <Flex flexDir={"column"} h={"full"} justifyContent={"center"} alignItems={"center"}>
@@ -191,21 +181,23 @@ export default function Home() {
             </Text>
           </Box>
           <Link href={ROUTES.projects}>
-            <HStack>
-              <Text color={"#F1F5F9"} fontWeight={"medium"}>
+            <HStack className={"group"}>
+              <Text color={"#F1F5F9"} fontWeight={"medium"} _groupHover={{ color: "#DE9E2C" }}>
                 View All
               </Text>
-              <Icon as={GoArrowRight} color={"#F1F5F9"} boxSize={[3, null, 4]} />
+              <Icon as={GoArrowRight} color={"#F1F5F9"} boxSize={[3, null, 4]} _groupHover={{ color: "#DE9E2C" }} />
             </HStack>
           </Link>
         </Flex>
-        <SimpleGrid columns={{ base: 1, md: 2 }} gap={[5, null, 6, 8]} mt={[10, null, 12, 14, 16]}>
-          {recentProjects.map((project, index) => (
+        <SimpleGrid columns={{ base: 1, md: 2 }} gap={[5, null, 6, 8, 10]} mt={[10, null, 12, 14, 16]}>
+          {allProjects.slice(0, 4).map(({ title, description, techStack, thumbnailImg, id, thumbnailGif }, i) => (
             <HomeProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              techStack={project.techStack}
+              key={i}
+              id={id}
+              title={title}
+              description={description}
+              techStack={techStack}
+              imageSrc={thumbnailGif ? thumbnailGif : thumbnailImg}
             />
           ))}
         </SimpleGrid>

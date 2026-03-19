@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PageWrapper from "@/components/layout/PageWrapper";
 import { Text, HStack, Box, SimpleGrid, Stack } from "@chakra-ui/react";
 import PageSection from "@/components/layout/PageSection";
-import { recentProjects } from "@/constants";
+import { allProjects } from "@/constants";
 import ProjectCard from "@/components/cards/ProjectCard";
 import Button from "@/components/ui/button";
 
@@ -41,12 +41,14 @@ const ProjectsPage = () => {
           ))}
         </HStack>
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={[5, null, 6, 8]} my={[6, null, 7, 8, 10]}>
-          {recentProjects.map((project, index) => (
+          {allProjects.map(({ title, id, description, techStack, thumbnailImg }, index) => (
             <ProjectCard
               key={index}
-              title={project.title}
-              description={project.description}
-              techStack={project.techStack}
+              id={id}
+              title={title}
+              description={description}
+              techStack={techStack}
+              imageSrc={thumbnailImg}
             />
           ))}
         </SimpleGrid>
