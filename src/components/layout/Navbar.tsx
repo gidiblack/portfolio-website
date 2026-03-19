@@ -12,6 +12,7 @@ import {
   Button as ChakraButton,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 import NextImage from "next/image";
 import logo from "../../../public/logo-icon.png";
 import { ROUTES } from "@/constants/routes";
@@ -22,7 +23,9 @@ import Button from "../ui/button";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { width } = useWindowDimensions();
+  const router = useRouter();
   const { open, onClose, onToggle, setOpen } = useDisclosure();
+  const currentPath = router.asPath.split("?")[0];
 
   const changeBg = useCallback(() => {
     if (width && width >= 512 && width < 1000) {
@@ -76,6 +79,7 @@ const Navbar = () => {
     <Link
       asChild
       _hover={{ borderBottom: "1.5px solid #DE9E2C" }}
+      borderBottom={href === currentPath ? "1.5px solid #DE9E2C" : "none"}
       transition={"all 0.25s ease-in-out"}
       p={2}
       className={"group"}>
@@ -83,7 +87,7 @@ const Navbar = () => {
         <Text
           fontSize={14}
           fontWeight={"medium"}
-          color={"#F1F5F9"}
+          color={href === currentPath ? "#DE9E2C" : "#F1F5F9"}
           _groupHover={{ color: "#DE9E2C" }}
           transition={"all 0.25s ease-in-out"}>
           {label}
