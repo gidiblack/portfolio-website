@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Flex, Icon, Image, Text } from "@chakra-ui/react";
 import NextImage from "next/image";
-import placeholder from "@/assets/project_placeholder.png";
 import Button from "../ui/button";
 import { GoArrowRight } from "react-icons/go";
 import Link from "next/link";
@@ -11,15 +10,19 @@ interface ProjectCardProps {
   title: string;
   description: string;
   techStack: string[];
-  imageSrc?: string;
+  imageSrc: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, techStack, imageSrc }) => {
   return (
     <Box bgColor={"#0F172A"} borderRadius={12}>
-      <Image asChild h={["20.5rem", null, "15rem", "18rem", "20.5rem"]} w={"full"}>
-        <NextImage src={imageSrc || placeholder.src} alt={title} width={590} height={332} objectFit="cover" />
-      </Image>
+      <Image
+        h={["20.5rem", null, "15rem", "18rem", "20.5rem"]}
+        w={"full"}
+        src={imageSrc}
+        alt={title}
+        objectFit="cover"
+      />
       <Box p={[5, null, 6, 7, 8]}>
         <Flex align={"center"} gap={3} mb={4}>
           {techStack.map((tech, index) => (

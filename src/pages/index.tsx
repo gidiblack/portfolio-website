@@ -220,9 +220,11 @@ export default function Home() {
           <Text fontSize={[16, null, 17, 18]} color={"#CBD5E1"} w={["full", null, "90%", "80%", "75%"]}>
             Let's discuss your project requirements and how we can turn your vision into a production-ready reality.
           </Text>
-          <Button variant={"primary"} size={["md", null, "lg"]}>
-            Hire Me
-          </Button>
+          <Link href={ROUTES.hireme}>
+            <Button variant={"primary"} size={["md", null, "lg"]}>
+              Hire Me
+            </Button>
+          </Link>
         </Stack>
       </PageSection>
     </PageWrapper>

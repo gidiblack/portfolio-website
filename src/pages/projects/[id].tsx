@@ -22,10 +22,23 @@ const ProjectDetails = () => {
   if (!projectData) {
     return (
       <PageWrapper title={"Project Not Found"} description={"The project you are looking for does not exist."}>
-        <PageSection>
-          <Text fontSize={24} fontWeight={"bold"} color={"#F1F5F9"}>
+        <PageSection textAlign={"center"}>
+          <Text
+            fontSize={[20, null, 22, 24]}
+            fontWeight={"bold"}
+            color={"#F1F5F9"}
+            mb={[2, null, 3]}
+            mt={[8, null, 10, 12]}>
             Project Not Found
           </Text>
+          <Text fontSize={[14, null, 15, 16]} fontWeight={"medium"} color={"#F1F5F9"} mb={[2, null, 3]}>
+            The project you are looking for does not exist. Check the link and try again
+          </Text>
+          <Link href={ROUTES.projects}>
+            <Button variant={"primary"} size={["sm", null, "md"]}>
+              Back to Projects
+            </Button>
+          </Link>
         </PageSection>
       </PageWrapper>
     );

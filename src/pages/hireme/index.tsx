@@ -510,11 +510,14 @@ const HireMePage = () => {
                 {/* Additional Project Details (spans 2 columns on large screens) */}
                 <Field.Root invalid={!!errors.details} gridColumn={{ base: "1", lg: "1 / -1" }}>
                   <Field.Label color="#F1F5F9" fontWeight="600">
-                    Additional Details
+                    Additional Details{" "}
+                    <Text as="span" color="#6B7280" fontSize="sm">
+                      (optional)
+                    </Text>
                   </Field.Label>
                   <Textarea
                     name="details"
-                    placeholder="Tell us more about your project, requirements, and vision..."
+                    placeholder="Tell me more about your project, requirements, and vision..."
                     value={formData.details}
                     onChange={handleChange}
                     bgColor="#1E293B"

@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import placeholder from "@/assets/project_placeholder.png";
 import Link from "next/link";
 import { ROUTES } from "@/constants/routes";
 
@@ -9,21 +8,14 @@ interface HomeProjectCardProps {
   title: string;
   description: string;
   techStack: string[];
-  imageSrc?: string;
+  imageSrc: string;
 }
 
 const HomeProjectCard: React.FC<HomeProjectCardProps> = ({ id, title, description, techStack, imageSrc }) => {
   return (
     <Link href={`${ROUTES.projects}/${id}`}>
       <Box _hover={{ transform: "scale(1.02)", transition: "transform 0.2s" }}>
-        <Image
-          borderRadius={16}
-          h={"20rem"}
-          w={"full"}
-          src={imageSrc || placeholder.src}
-          alt={title}
-          objectFit="cover"
-        />
+        <Image borderRadius={16} h={"20rem"} w={"full"} src={imageSrc} alt={title} objectFit="cover" />
         <Flex mt={[4, null, 5, 6]} mb={4} align={"center"} gap={3}>
           {techStack.map((tech, index) => (
             <Box key={index} bgColor={"#1E293B"} borderRadius={6} py={1} px={2}>

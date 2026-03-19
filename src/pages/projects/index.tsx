@@ -5,6 +5,8 @@ import PageSection from "@/components/layout/PageSection";
 import { allProjects } from "@/constants";
 import ProjectCard from "@/components/cards/ProjectCard";
 import Button from "@/components/ui/button";
+import { ROUTES } from "@/constants/routes";
+import Link from "next/link";
 
 const ProjectsPage = () => {
   const [category, setCategory] = useState("All");
@@ -41,14 +43,14 @@ const ProjectsPage = () => {
           ))}
         </HStack>
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={[5, null, 6, 8]} my={[6, null, 7, 8, 10]}>
-          {allProjects.map(({ title, id, description, techStack, thumbnailImg }, index) => (
+          {allProjects.map(({ title, id, description, techStack, thumbnailImg, thumbnailGif }, index) => (
             <ProjectCard
               key={index}
               id={id}
               title={title}
               description={description}
               techStack={techStack}
-              imageSrc={thumbnailImg}
+              imageSrc={thumbnailGif ? thumbnailGif : thumbnailImg}
             />
           ))}
         </SimpleGrid>
@@ -62,9 +64,11 @@ const ProjectsPage = () => {
           <Text fontSize={[16, null, 17, 18]} color={"#CBD5E1"} w={["full", null, "90%", "80%", "75%"]}>
             Let's discuss your project requirements and how we can turn your vision into a production-ready reality.
           </Text>
-          <Button variant={"primary"} size={"lg"}>
-            Hire Me
-          </Button>
+          <Link href={ROUTES.hireme}>
+            <Button variant={"primary"} size={"lg"}>
+              Hire Me
+            </Button>
+          </Link>
         </Stack>
       </PageSection>
     </PageWrapper>
