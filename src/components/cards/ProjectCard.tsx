@@ -4,6 +4,7 @@ import NextImage from "next/image";
 import placeholder from "@/assets/project_placeholder.png";
 import Button from "../ui/button";
 import { GoArrowRight } from "react-icons/go";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
@@ -34,10 +35,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techStack
         <Text fontSize={[14, null, 15, 16]} color={"#94A3B8"}>
           {description}
         </Text>
-        <Button variant={"secondary"} size={"sm"} mt={[5, null, 6, 7, 8]}>
-          View Details
-          <Icon as={GoArrowRight} color={"#F1F5F9"} boxSize={[3, null, 4]} ml={2} />
-        </Button>
+        <Link href={"/projects/1"}>
+          <Button variant={"secondary"} size={"sm"} mt={[5, null, 6, 7, 8]}>
+            View Details
+            <Icon as={GoArrowRight} color={"#F1F5F9"} boxSize={[3, null, 4]} ml={2} />
+          </Button>
+        </Link>
       </Box>
     </Box>
   );
