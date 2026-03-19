@@ -22,6 +22,8 @@ import { GoCodeSquare } from "react-icons/go";
 import { IoMdAnalytics } from "react-icons/io";
 import { LuShieldCheck } from "react-icons/lu";
 import ServiceCard from "@/components/cards/ServiceCard";
+import { ROUTES } from "@/constants/routes";
+import Link from "next/link";
 
 // Form validation utilities
 const validateUrl = (url: string): boolean => {
@@ -222,9 +224,11 @@ const HireMePage = () => {
                 <Icon as={BiDownload} boxSize={5} color={"#F1F5F9"} mr={2} />
                 Download Resume
               </Button>
-              <Button variant={"outline"} size={["sm", null, "md", "lg"]}>
-                View Projects
-              </Button>
+              <Link href={ROUTES.projects}>
+                <Button variant={"outline"} size={["sm", null, "md", "lg"]}>
+                  View Projects
+                </Button>
+              </Link>
             </HStack>
           </Stack>
           <Flex flexDir={"column"} h={"full"} justifyContent={"center"} alignItems={"center"}>

@@ -43,16 +43,23 @@ const ProjectsPage = () => {
           ))}
         </HStack>
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={[5, null, 6, 8]} my={[6, null, 7, 8, 10]}>
-          {allProjects.map(({ title, id, description, techStack, thumbnailImg, thumbnailGif }, index) => (
-            <ProjectCard
-              key={index}
-              id={id}
-              title={title}
-              description={description}
-              techStack={techStack}
-              imageSrc={thumbnailGif ? thumbnailGif : thumbnailImg}
-            />
-          ))}
+          {allProjects
+            .filter((project) => {
+              if (category === "All") return true;
+              if (category === "Web Apps") return project.type === "web";
+              if (category === "Mobile") return project.type === "mobile";
+              return false;
+            })
+            .map(({ title, id, description, techStack, thumbnailImg, thumbnailGif }, index) => (
+              <ProjectCard
+                key={index}
+                id={id}
+                title={title}
+                description={description}
+                techStack={techStack}
+                imageSrc={thumbnailGif ? thumbnailGif : thumbnailImg}
+              />
+            ))}
         </SimpleGrid>
       </PageSection>
       {/* CTA */}

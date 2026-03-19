@@ -9,6 +9,7 @@ interface IProject {
   githubRepoLink?: string;
   overview: Item[];
   engine: Item[];
+  type: "web" | "mobile";
   challenge?: string;
   solution?: string;
   interfaceScreenshots?: string[];
@@ -43,6 +44,7 @@ export const allProjects: IProject[] = [
     thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-landing-hero.png",
     techStack: ["HTML", "JavaScript", "CSS"],
     liveDemoLink: "https://lxpath.com/",
+    type: "web",
     overview: [
       {
         label: "Role",
@@ -86,6 +88,7 @@ export const allProjects: IProject[] = [
     thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-home.png",
     techStack: ["Next.js", "TypeScript"],
     liveDemoLink: "https://app.lxpath.com/",
+    type: "web",
     overview: [
       {
         label: "Role",
@@ -124,7 +127,7 @@ export const allProjects: IProject[] = [
     solution: `AI-Powered Analysis: Advanced algorithms assess your current skills and highlight gaps.\n
     Personalized Path Generation: The platform curates a unique learning path based on your profile and goals.\n
     Dynamic Adaptation: As you progress, the learning path adjusts in real-time to keep you on track and motivated.`,
-    interfaceScreenshots: [""],
+    interfaceScreenshots: ["https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-home.png"],
   },
   {
     id: "balloon-landing-page",
@@ -135,6 +138,7 @@ export const allProjects: IProject[] = [
     thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/balloon-landing-page.gif",
     techStack: ["Next.js", "TypeScript"],
     liveDemoLink: "https://myballoon.co/",
+    type: "web",
     overview: [
       {
         label: "Role",
@@ -180,6 +184,7 @@ export const allProjects: IProject[] = [
     thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-dashboard.png",
     techStack: ["Next.js", "TypeScript", "Node.js", "AWS"],
     liveDemoLink: "https://fleet.etapinsure.com/",
+    type: "web",
     overview: [
       {
         label: "Role",

@@ -191,6 +191,43 @@ const ProjectDetails = () => {
           ))}
         </SimpleGrid>
       </PageSection>
+      <PageSection>
+        <Text fontSize={[22, null, 24, 28, 30]} fontWeight={"bold"} color={"#F1F5F9"}>
+          Interface Exploration
+        </Text>
+        <Flex
+          overflowX="auto"
+          gap={[3, null, 4, 5]}
+          pb={2}
+          mt={[5, null, 6, 8]}
+          css={{
+            "&::-webkit-scrollbar": {
+              height: "4px",
+            },
+            "&::-webkit-scrollbar-track": {
+              background: "#1E293B",
+              borderRadius: "2px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "#475569",
+              borderRadius: "2px",
+            },
+          }}>
+          {projectData?.interfaceScreenshots !== undefined &&
+            projectData.interfaceScreenshots.map((screenshot, index) => (
+              <Image
+                key={index}
+                src={screenshot}
+                minW={["90vw", null, "70vw", "50vw", "40vw"]}
+                h="auto"
+                borderRadius={8}
+                border="1px solid #1E293B"
+                alt={`Interface screenshot ${index + 1}`}
+                objectFit={"contain"}
+              />
+            ))}
+        </Flex>
+      </PageSection>
       {/* CTA */}
       <PageSection bgColor={"#0F172A50"}>
         <Stack gap={[4, null, 5, 6]} maxW={"60rem"} mx={"auto"} textAlign={"center"} align={"center"}>
