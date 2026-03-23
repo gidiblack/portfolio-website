@@ -202,7 +202,6 @@ const HireMePage = () => {
     setIsSubmitting(true);
 
     try {
-      // Log form data to console
       const submissionData = {
         name: formData.name,
         website: formData.website || "Not provided",
@@ -231,9 +230,6 @@ const HireMePage = () => {
         details: "",
       });
       setErrors({});
-
-      // Here you would typically send the data to your backend
-      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(submissionData) })
     } catch (error) {
       console.error("❌ Error submitting form:", error);
       setErrors({
@@ -269,15 +265,15 @@ const HireMePage = () => {
               </Box>
               <Text
                 className={"hire-hero-title"}
-                fontSize={[56, null, 60, 64, 72]}
+                fontSize={[48, 50, 60, 64, 72]}
                 fontWeight={"black"}
                 color={"#F1F5F9"}
-                lineHeight={["56px", null, "60px", "64px", "72px"]}>
+                lineHeight={["48px", "50px", "60px", "64px", "72px"]}>
                 I build{" "}
                 <Text as={"span"} bgGradient={"linear-gradient(0deg, #94A3B8, #F1F5F9)"} bgClip="text">
                   scalable web solutions
                 </Text>{" "}
-                that drive business growth
+                that drive growth.
               </Text>
               <Text className={"hire-hero-subtitle"} fontSize={[15, null, 16, 18]} color={"#94A3B8"}>
                 I bridge the gap between complex engineering and business goals. Let's turn your vision into a
@@ -353,7 +349,7 @@ const HireMePage = () => {
 
             {/* Contact Form */}
             <form onSubmit={handleSubmit}>
-              <Box className={"hire-contact-form"} bgColor="#0F172A" p={10} borderRadius="16px" w="full">
+              <Box className={"hire-contact-form"} bgColor="#0F172A" p={[6, null, 8, 10]} borderRadius="16px" w="full">
                 <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6}>
                   {/* Name Field */}
                   <Field.Root invalid={!!errors.name} required>
@@ -518,7 +514,7 @@ const HireMePage = () => {
                     </Field.Label>
                     <Input
                       name="budget"
-                      placeholder="e.g., $5,000 - $10,000"
+                      placeholder="e.g. $5,000 - $10,000"
                       value={formData.budget}
                       onChange={handleChange}
                       bgColor="#1E293B"
@@ -544,7 +540,7 @@ const HireMePage = () => {
                     </Field.Label>
                     <Input
                       name="timeline"
-                      placeholder="e.g., 3 months"
+                      placeholder="e.g. 3 months"
                       value={formData.timeline}
                       onChange={handleChange}
                       bgColor="#1E293B"

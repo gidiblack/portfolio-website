@@ -130,10 +130,10 @@ const ProjectDetails = () => {
               </Flex>
               <Text
                 className={"project-hero-title"}
-                fontSize={[56, null, 60, 64, 72]}
+                fontSize={[48, 50, 60, 64, 72]}
                 fontWeight={"black"}
                 color={"#F1F5F9"}
-                lineHeight={"72px"}>
+                lineHeight={["48px", "50px", "60px", "64px", "72px"]}>
                 {projectData.title}
               </Text>
               <Text className={"project-hero-subtitle"} fontSize={[15, null, 16, 18]} color={"#94A3B8"}>
@@ -313,7 +313,7 @@ const ProjectDetails = () => {
             mx={"auto"}
             textAlign={"center"}
             align={"center"}>
-            <Text fontSize={[32, null, 36, 40, 44]} fontWeight={"black"} color={"#F1F5F9"}>
+            <Text fontSize={[30, 32, 36, 40, 44]} fontWeight={"black"} color={"#F1F5F9"}>
               Ready to build something impactful?
             </Text>
             <Text fontSize={[16, null, 17, 18]} color={"#CBD5E1"} w={["full", null, "90%", "80%", "75%"]}>
