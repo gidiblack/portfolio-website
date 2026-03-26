@@ -20,22 +20,67 @@ interface Item {
   value: string;
 }
 
-export const recentProjects = [
-  {
-    title: "E-commerce Platform",
-    description: "A scalable e-commerce platform with real-time inventory management and payment integration.",
-    techStack: ["React", "Node.js", "MongoDB"],
-    imageSrc: "/ecommerce_project.png",
-  },
-  {
-    title: "Social Media App",
-    description: "A feature-rich social media application with real-time chat and media sharing capabilities.",
-    techStack: ["Flutter", "Firebase", "GraphQL"],
-    imageSrc: "/social_media_project.png",
-  },
-];
-
 export const allProjects: IProject[] = [
+  {
+    id: "lxpath-web-app",
+    title: "LxPath Web App",
+    description:
+      "LxPath is an AI-powered platform that creates personalized learning paths tailored to your skills, career goals, and progress. Instead of manually searching through countless courses, it automatically curates and adapts a learning journey for you. Whether you're a beginner looking to break into tech or an experienced professional aiming to upskill, LxPath simplifies your learning experience and helps you achieve your goals faster.",
+    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-home.png",
+    thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-screen_capture-ezgif.gif",
+    techStack: ["Next.js", "TypeScript"],
+    liveDemoLink: "https://app.lxpath.com/",
+    type: "web",
+    overview: [
+      {
+        label: "Role",
+        value: "Frontend Developer",
+      },
+      {
+        label: "Client",
+        value: "LxPath",
+      },
+      {
+        label: "Timeline",
+        value: "6 months",
+      },
+      {
+        label: "Tech Stack",
+        value: "Next.js, TypeScript",
+      },
+    ],
+    engine: [
+      {
+        label: "Frontend Logic",
+        value: "Next.js, TypeScript",
+      },
+      {
+        label: "API Integration",
+        value: "Node.js",
+      },
+      {
+        label: "Database",
+        value: "AWS",
+      },
+    ],
+    challenge: `People waste significant time trying to figure out which courses or resources are best for their career development.\n
+    Traditional learning platforms often provide static, one-size-fits-all paths that don’t adjust to individual skill levels or evolving goals.\n
+    Learners struggle to identify their knowledge gaps and track progress effectively.`,
+    solution: `AI-Powered Analysis: Advanced algorithms assess your current skills and highlight gaps.\n
+    Personalized Path Generation: The platform curates a unique learning path based on your profile and goals.\n
+    Dynamic Adaptation: As you progress, the learning path adjusts in real-time to keep you on track and motivated.`,
+    interfaceScreenshots: [
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-home.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-dashboard.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-learning_path.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-learning_path2.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-course.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-why_course.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-skill_breakdown.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-schedule.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-profile.png",
+    ],
+  },
   {
     id: "lxpath-landing-page",
     title: "LxPath Landing Page",
@@ -79,55 +124,6 @@ export const allProjects: IProject[] = [
       "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-landing-sharepath.png",
       "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-landing-appdemo.png",
     ],
-  },
-  {
-    id: "lxpath-web-app",
-    title: "LxPath Web App",
-    description:
-      "LxPath is an AI-powered platform that creates personalized learning paths tailored to your skills, career goals, and progress. Instead of manually searching through countless courses, it automatically curates and adapts a learning journey for you. Whether you're a beginner looking to break into tech or an experienced professional aiming to upskill, LxPath simplifies your learning experience and helps you achieve your goals faster.",
-    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-home.png",
-    techStack: ["Next.js", "TypeScript"],
-    liveDemoLink: "https://app.lxpath.com/",
-    type: "web",
-    overview: [
-      {
-        label: "Role",
-        value: "Frontend Developer",
-      },
-      {
-        label: "Client",
-        value: "LxPath",
-      },
-      {
-        label: "Timeline",
-        value: "6 months",
-      },
-      {
-        label: "Tech Stack",
-        value: "Next.js, TypeScript",
-      },
-    ],
-    engine: [
-      {
-        label: "Frontend Logic",
-        value: "Next.js, TypeScript",
-      },
-      {
-        label: "API Integration",
-        value: "Node.js",
-      },
-      {
-        label: "Database",
-        value: "AWS",
-      },
-    ],
-    challenge: `People waste significant time trying to figure out which courses or resources are best for their career development.\n
-    Traditional learning platforms often provide static, one-size-fits-all paths that don’t adjust to individual skill levels or evolving goals.\n
-    Learners struggle to identify their knowledge gaps and track progress effectively.`,
-    solution: `AI-Powered Analysis: Advanced algorithms assess your current skills and highlight gaps.\n
-    Personalized Path Generation: The platform curates a unique learning path based on your profile and goals.\n
-    Dynamic Adaptation: As you progress, the learning path adjusts in real-time to keep you on track and motivated.`,
-    interfaceScreenshots: ["https://ik.imagekit.io/gideonimgkit/porfolio/lxpath-app-home.png"],
   },
   {
     id: "balloon-landing-page",
@@ -182,6 +178,7 @@ export const allProjects: IProject[] = [
     description:
       "a fleet insurance management platform. It solves the problem of fragmented policy oversight by offering a single dashboard where managers can monitor drivers, ensure compliance, and keep policies up to date.",
     thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-dashboard.png",
+    thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-screen_capture-ezgif.gif",
     techStack: ["Next.js", "TypeScript", "Node.js", "AWS"],
     liveDemoLink: "https://fleet.etapinsure.com/",
     type: "web",
@@ -222,6 +219,14 @@ export const allProjects: IProject[] = [
     interfaceScreenshots: [
       "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-dashboard.png",
       "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-policies.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-claims.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-drivers.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-wallet.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-make_claim.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-driver_leaderboard.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-add_driver.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-signup.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-capture_reminder.png",
     ],
   },
 ];
