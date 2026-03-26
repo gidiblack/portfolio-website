@@ -108,50 +108,55 @@ const Navbar = () => {
         w={"full"}
         border={"1px solid #1E293B"}
         boxShadow={"xs"}
-        bg={scrolled ? "#16191C" : "transparent"}
-        px={[5, null, 6, 8, 10]}
-        py={[2.5, null, 3, 4]}
-        justifyContent={"space-between"}
-        alignItems={"center"}>
-        <Link href={ROUTES.home}>
-          <HStack gap={1}>
-            <Image asChild boxSize={{ base: 4, md: 5, lg: 6 }} position={"relative"} objectFit={"contain"}>
-              <NextImage src={logo.src} alt="gideon's logo" width={24} height={24} />
-            </Image>
-            <Text fontSize={[16, null, 18, 20]} fontWeight={"bold"} color={"#DE9E2C"}>
-              Gideon E.
-            </Text>
-          </HStack>
-        </Link>
-        <HStack gap={6} display={{ base: "none", md: "flex" }}>
-          {NAV_ITEMS.map(({ label, href }, i) => (
-            <NavItem key={i} label={label} href={href} />
-          ))}
-        </HStack>
-        <HStack>
-          <Link href={ROUTES.hireme} display={{ base: "none", md: "inline-flex" }}>
-            <Button size={"sm"}>Hire Me</Button>
+        justify={"center"}
+        bg={scrolled ? "#16191C" : "transparent"}>
+        <Flex
+          w={"full"}
+          maxW={{ base: "100vw", "2xl": "90rem" }}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          px={[5, null, 6, 8, 10]}
+          py={[2.5, null, 3, 4]}>
+          <Link href={ROUTES.home}>
+            <HStack gap={1}>
+              <Image asChild boxSize={{ base: 4, md: 5, lg: 6 }} position={"relative"} objectFit={"contain"}>
+                <NextImage src={logo.src} alt="gideon's logo" width={24} height={24} />
+              </Image>
+              <Text fontSize={[16, null, 18, 20]} fontWeight={"bold"} color={"#DE9E2C"}>
+                Gideon E.
+              </Text>
+            </HStack>
           </Link>
-          <Flex
-            onClick={onToggle}
-            display={["inline-flex", null, "none"]}
-            aria-label={"Toggle Navigation"}
-            role={"button"}
-            tabIndex={0}
-            cursor={"pointer"}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                onToggle();
-              }
-            }}>
-            {open ? (
-              <Icon as={AiOutlineClose} boxSize={5} color={scrolled ? "initial" : "white"} />
-            ) : (
-              <Icon as={AiOutlineMenu} boxSize={5} color={scrolled ? "initial" : "white"} />
-            )}
-          </Flex>
-        </HStack>
+          <HStack gap={6} display={{ base: "none", md: "flex" }}>
+            {NAV_ITEMS.map(({ label, href }, i) => (
+              <NavItem key={i} label={label} href={href} />
+            ))}
+          </HStack>
+          <HStack>
+            <Link href={ROUTES.hireme} display={{ base: "none", md: "inline-flex" }}>
+              <Button size={"sm"}>Hire Me</Button>
+            </Link>
+            <Flex
+              onClick={onToggle}
+              display={["inline-flex", null, "none"]}
+              aria-label={"Toggle Navigation"}
+              role={"button"}
+              tabIndex={0}
+              cursor={"pointer"}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  onToggle();
+                }
+              }}>
+              {open ? (
+                <Icon as={AiOutlineClose} boxSize={5} color={scrolled ? "initial" : "white"} />
+              ) : (
+                <Icon as={AiOutlineMenu} boxSize={5} color={scrolled ? "initial" : "white"} />
+              )}
+            </Flex>
+          </HStack>
+        </Flex>
       </Flex>
 
       <Drawer.Root open={open} placement={"top"} onOpenChange={(details) => setOpen(details.open)}>

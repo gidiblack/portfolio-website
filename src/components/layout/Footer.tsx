@@ -25,37 +25,37 @@ const Footer = () => {
     },
   ];
   return (
-    <Flex
-      as="footer"
-      w="full"
-      flexDir={["column", null, "row"]}
-      px={[5, null, 6, 8, 10]}
-      py={[4, null, 5, 6]}
-      gap={[2, null, 0]}
-      justifyContent="space-between"
-      alignItems="center"
-      bg="#16191C"
-      border={"1px solid #1E293B"}>
-      <Link href={ROUTES.home}>
-        <HStack gap={0.5}>
-          <Image asChild boxSize={{ base: 3, md: 4 }} position={"relative"} objectFit={"contain"}>
-            <NextImage src={logo.src} alt="gideon's logo" width={24} height={24} />
-          </Image>
-          <Text fontSize={[12, null, 13, 14]} fontWeight={"bold"} color={"#DE9E2C"}>
-            Gideon E.
-          </Text>
+    <Flex as="footer" w="full" justifyContent="center" bg="#16191C" border={"1px solid #1E293B"}>
+      <Flex
+        w={"full"}
+        maxW={{ base: "100vw", "2xl": "90rem" }}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        px={[5, null, 6, 8, 10]}
+        py={[4, null, 5, 6]}
+        gap={[2, null, 0]}
+        flexDir={["column", null, "row"]}>
+        <Link href={ROUTES.home}>
+          <HStack gap={0.5}>
+            <Image asChild boxSize={{ base: 3, md: 4 }} position={"relative"} objectFit={"contain"}>
+              <NextImage src={logo.src} alt="gideon's logo" width={24} height={24} />
+            </Image>
+            <Text fontSize={[12, null, 13, 14]} fontWeight={"bold"} color={"#DE9E2C"}>
+              Gideon E.
+            </Text>
+          </HStack>
+        </Link>
+        <Text fontSize={[12, null, 13, 14]} color={"#64748B"}>
+          &copy; {new Date().getFullYear()} Gideon Etim, All rights reserved.
+        </Text>
+        <HStack gap={4}>
+          {SOCIALS.map((social) => (
+            <Link key={social.label} href={social.href} target="_blank" rel="noopener noreferrer">
+              <Icon as={social.icon} boxSize={4} color={"#64748B"} />
+            </Link>
+          ))}
         </HStack>
-      </Link>
-      <Text fontSize={[12, null, 13, 14]} color={"#64748B"}>
-        &copy; {new Date().getFullYear()} Gideon Etim, All rights reserved.
-      </Text>
-      <HStack gap={4}>
-        {SOCIALS.map((social) => (
-          <Link key={social.label} href={social.href} target="_blank" rel="noopener noreferrer">
-            <Icon as={social.icon} boxSize={4} color={"#64748B"} />
-          </Link>
-        ))}
-      </HStack>
+      </Flex>
     </Flex>
   );
 };
