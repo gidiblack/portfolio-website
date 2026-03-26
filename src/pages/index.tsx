@@ -275,19 +275,22 @@ export default function Home() {
               </HStack>
             </Link>
           </Flex>
-          <SimpleGrid columns={{ base: 1, md: 2 }} gap={[5, null, 6, 8, 10]} mt={[10, null, 12, 14, 16]}>
-            {allProjects.slice(0, 4).map(({ title, description, techStack, thumbnailImg, id, thumbnailGif }, i) => (
-              <Box key={i} className={"project-card"}>
-                <HomeProjectCard
-                  id={id}
-                  title={title}
-                  description={description}
-                  techStack={techStack}
-                  imageSrc={thumbnailImg}
-                  gifSrc={thumbnailGif}
-                />
-              </Box>
-            ))}
+          <SimpleGrid columns={{ base: 1, md: 2 }} gap={[12, null, 6, 8, 10]} mt={[10, null, 12, 14, 16]}>
+            {allProjects
+              .slice(0, 4)
+              .map(({ title, description, techStack, thumbnailImg, id, thumbnailGif, type }, i) => (
+                <Box key={i} className={"project-card"}>
+                  <HomeProjectCard
+                    id={id}
+                    title={title}
+                    description={description}
+                    techStack={techStack}
+                    imageSrc={thumbnailImg}
+                    gifSrc={thumbnailGif}
+                    type={type}
+                  />
+                </Box>
+              ))}
           </SimpleGrid>
         </PageSection>
         {/* CTA */}

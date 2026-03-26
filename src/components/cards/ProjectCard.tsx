@@ -12,9 +12,18 @@ interface ProjectCardProps {
   techStack: string[];
   imageSrc: string;
   gifSrc?: string;
+  type?: "web" | "mobile";
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, techStack, imageSrc, gifSrc }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
+  title,
+  description,
+  techStack,
+  imageSrc,
+  gifSrc,
+  type = "web",
+}) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   return (
@@ -22,13 +31,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, techS
       bgColor={"#0F172A"}
       borderRadius={12}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}>
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}>
       <Image
-        h={["20.5rem", null, "15rem", "18rem", "20.5rem"]}
+        h={["13rem", null, "15rem", "18rem", "20.5rem"]}
         w={"full"}
         src={isHovered && gifSrc ? gifSrc : imageSrc}
         alt={title}
-        objectFit="cover"
+        objectFit={type === "web" ? "cover" : "contain"}
       />
       <Box p={[5, null, 6, 7, 8]}>
         <Flex align={"center"} gap={3} mb={4}>

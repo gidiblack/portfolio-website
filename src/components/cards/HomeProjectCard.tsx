@@ -10,9 +10,18 @@ interface HomeProjectCardProps {
   techStack: string[];
   imageSrc: string;
   gifSrc?: string;
+  type?: "web" | "mobile";
 }
 
-const HomeProjectCard: React.FC<HomeProjectCardProps> = ({ id, title, description, techStack, imageSrc, gifSrc }) => {
+const HomeProjectCard: React.FC<HomeProjectCardProps> = ({
+  id,
+  title,
+  description,
+  techStack,
+  imageSrc,
+  gifSrc,
+  type = "web",
+}) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   return (
@@ -23,11 +32,11 @@ const HomeProjectCard: React.FC<HomeProjectCardProps> = ({ id, title, descriptio
         onMouseLeave={() => setIsHovered(false)}>
         <Image
           borderRadius={16}
-          h={"20rem"}
+          h={["12.5rem", null, null, "16rem", "20rem"]}
           w={"full"}
           src={isHovered && gifSrc ? gifSrc : imageSrc}
           alt={title}
-          objectFit="cover"
+          objectFit={type === "web" ? "cover" : "contain"}
         />
         <Flex mt={[4, null, 5, 6]} mb={4} align={"center"} gap={3}>
           {techStack.map((tech, index) => (

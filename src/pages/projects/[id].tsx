@@ -164,8 +164,8 @@ const ProjectDetails = () => {
               alignItems={"center"}>
               <Image
                 src={projectData.thumbnailGif ? projectData.thumbnailGif : projectData.thumbnailImg}
-                w={"full"}
-                h={["17.5rem", null, "20rem", "22.5rem", "24rem", "25rem"]}
+                w={projectData.type === "web" ? "full" : "auto"}
+                h={[`${projectData.type === "web" ? "14rem" : "24rem"}`, null, "20rem", "22.5rem", "24rem", "25rem"]}
                 alt={projectData.title}
               />
             </Flex>
@@ -294,12 +294,12 @@ const ProjectDetails = () => {
                   key={index}
                   className={"project-screenshot"}
                   src={screenshot}
-                  minW={["90vw", null, "70vw", "50vw", "40vw"]}
+                  minW={projectData.type === "web" ? ["90vw", null, "70vw", "50vw", "40vw"] : "178px"}
                   h="auto"
                   borderRadius={8}
                   border="1px solid #1E293B"
                   alt={`Interface screenshot ${index + 1}`}
-                  objectFit={"contain"}
+                  objectFit={projectData.type === "web" ? "cover" : "contain"}
                 />
               ))}
           </Flex>
