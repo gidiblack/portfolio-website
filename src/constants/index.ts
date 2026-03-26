@@ -174,7 +174,7 @@ export const allProjects: IProject[] = [
   },
   {
     id: "etap-website",
-    title: "ETAP Digital Website",
+    title: "ETAP Insurance",
     description:
       "ETAP transforms car insurance from a bureaucratic hassle into a fast, flexible, and rewarding experience. By combining instant coverage, rapid claims, and safe-driving incentives, it solves the inefficiencies of traditional insurance while empowering drivers with control and savings.",
     thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-hero.png",
@@ -245,7 +245,7 @@ export const allProjects: IProject[] = [
   },
   {
     id: "etap-mobile-app",
-    title: "ETAP Digital Mobile App",
+    title: "ETAP Mobile App",
     description:
       "ETAP transforms car insurance from a bureaucratic necessity into a fast, flexible, and rewarding experience. By combining instant coverage, rapid claims, and gamified safe-driving rewards, it solves the inefficiencies of traditional insurance while motivating drivers to be safer and more engaged.",
     thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-dashboard.png",
@@ -315,7 +315,7 @@ export const allProjects: IProject[] = [
   },
   {
     id: "etap-enterprise-dashboard",
-    title: "ETAP Fleet Management Dashboard",
+    title: "ETAP Fleet Manager",
     description:
       "a fleet insurance management platform. It solves the problem of fragmented policy oversight by offering a single dashboard where managers can monitor drivers, ensure compliance, and keep policies up to date.",
     thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-dashboard.png",
@@ -372,7 +372,7 @@ export const allProjects: IProject[] = [
   },
   {
     id: "veendhq-website",
-    title: "VeendHQ Website",
+    title: "VeendHQ",
     description:
       "VeendHQ transforms lending in Nigeria by making credit fast, flexible, and accessible. It eliminates the barriers of traditional banking, offering tailored financial solutions that empower individuals, civil servants, and businesses to meet urgent needs and pursue opportunities confidently.",
     thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-hero.png",
@@ -433,6 +433,192 @@ export const allProjects: IProject[] = [
       "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-payroll_loans.png",
       "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-bnpl.png",
       "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-customized_products.png",
+    ],
+  },
+  {
+    id: "emmatob-website",
+    title: "Emmatob Technologies",
+    description:
+      "Emma-Tob Technologies bridges the gap between industrial demand and supply by offering locally accessible, precision-engineered machine parts and fabrication services. It solves the challenge of scarce, costly, and delayed spare parts, empowering manufacturers to reduce production costs and maintain efficiency",
+    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-home_hero.png",
+    thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-screen_capture-ezgif.gif",
+    techStack: ["Next.js", "TypeScript"],
+    liveDemoLink: "https://emma-tob.com/",
+    type: "web",
+    overview: [
+      {
+        label: "Role",
+        value: "Frontend Developer",
+      },
+      {
+        label: "Client",
+        value: "Emma-Tob Technologies",
+      },
+      {
+        label: "Timeline",
+        value: "6 weeks",
+      },
+      {
+        label: "Tech Stack",
+        value: "Next.js, TypeScript",
+      },
+    ],
+    engine: [
+      {
+        label: "Frontend Logic",
+        value: "Next.js, TypeScript",
+      },
+    ],
+    challenge: `Manufacturers in Nigeria face significant challenges in sourcing machine parts, including scarcity, high costs, and long lead times.\n
+    The challenge was to create a digital platform that connects manufacturers with locally accessible, precision-engineered machine parts and fabrication services, reducing production costs and improving efficiency.\n
+     Traditional supply chains often fail to meet the urgent needs of manufacturers, leading to costly downtime and lost productivity.\n`,
+    solution: `The solution was to develop a user-friendly website that serves as a marketplace for machine parts and fabrication services.\n
+    By leveraging technology, Emma-Tob Technologies bridges the gap between industrial demand and supply, empowering manufacturers to access the parts they need quickly and affordably, ultimately enhancing their operational efficiency.\n
+     The platform offers a wide range of precision-engineered parts, connects manufacturers with local fabricators, and provides real-time availability and pricing information, streamlining the procurement process.\n`,
+    interfaceScreenshots: [
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-home_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-clients.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-get_in_touch.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-testimonials.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-sercives_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-usp.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-mission_vision.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-engineering_service.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-about_us-hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-tools_service.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-products_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-products_list.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-products.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-products_list2.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_website-story_statement.png",
+    ],
+  },
+  {
+    id: "emmatob-international-academy",
+    title: "Emmatob International Academy",
+    description:
+      "Emma-Tob International Academy bridges the gap between education and industry by offering practical, flexible, and industry-aligned engineering training. It solves the challenge of underprepared graduates and career stagnation by equipping learners with hands-on skills, certifications, and tailored programmes that meet both personal and corporate needs.",
+    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-home_hero.png",
+    thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-screen_capture-ezgif.gif",
+    techStack: ["Next.js", "TypeScript"],
+    liveDemoLink: "https://academy.emma-tob.com/",
+    type: "web",
+    overview: [
+      {
+        label: "Role",
+        value: "Frontend Developer",
+      },
+      {
+        label: "Client",
+        value: "Emma-Tob Technologies",
+      },
+      {
+        label: "Timeline",
+        value: "6 weeks",
+      },
+      {
+        label: "Tech Stack",
+        value: "Next.js, TypeScript",
+      },
+    ],
+    engine: [
+      {
+        label: "Frontend Logic",
+        value: "Next.js, TypeScript",
+      },
+    ],
+    challenge: `Many engineering graduates in Nigeria struggle to find employment due to a gap between academic training and industry needs.\n
+    The challenge was to create a digital platform that offers practical, flexible, and industry-aligned engineering training, equipping learners with the skills and certifications needed to succeed in the job market.\n
+     Traditional education systems often fail to provide hands-on experience or tailored programs that meet the specific needs of both learners and employers, leading to underprepared graduates and career stagnation.\n`,
+    solution: `The solution was to develop a user-friendly website that serves as an online academy, providing a range of engineering courses and training programs. By leveraging technology, Emma-Tob International Academy bridges the gap between education and industry, empowering learners to acquire hands-on skills and certifications that enhance their employability and career prospects.\n
+     The platform offers a variety of courses, from foundational engineering principles to advanced technical skills, all designed in collaboration with industry experts to ensure relevance and practical application.\n
+     Learners can access flexible learning paths, earn certifications, and connect with potential employers, creating a comprehensive ecosystem that supports career growth and development in the engineering field.\n`,
+    interfaceScreenshots: [
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-home_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-who_we_are.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-contact_form.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-home_programmes.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-usps.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-programmes_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-programmes_list.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-programmes_specializations.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-about_us_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-founders_message.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-history.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-approach.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-approach2.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-admissions_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-admission_requirements.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-admission_process.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-referrals.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-interview_prep.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-services_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-services_mentorship.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-support_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-faqs.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/emmatob_academy_website-fee_structure.png",
+    ],
+  },
+  {
+    id: "yarlo-marketplace",
+    title: "Yarlo Marketplace",
+    description:
+      "Yarlo transforms idle assets into income opportunities and makes rentals more accessible, affordable, and trustworthy. It solves the inefficiencies of traditional rental markets by creating a digital, community-driven ecosystem where everyone benefits—owners earn, renters save.",
+    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-home_hero.png",
+    techStack: ["React Js", "JavaScript"],
+    liveDemoLink: "https://yarlo-frontend.vercel.app/",
+    type: "web",
+    overview: [
+      {
+        label: "Role",
+        value: "Frontend Developer",
+      },
+      {
+        label: "Client",
+        value: "Yarlo",
+      },
+      {
+        label: "Timeline",
+        value: "4 months",
+      },
+      {
+        label: "Tech Stack",
+        value: "React Js, JavaScript",
+      },
+    ],
+    engine: [
+      {
+        label: "Frontend Logic",
+        value: "React Js, JavaScript",
+      },
+      {
+        label: "API Integration",
+        value: "Node.js",
+      },
+    ],
+    challenge: `
+    Traditional rental markets are inefficient, with high costs, limited accessibility, and trust issues between owners and renters.\n
+    Owners of idle assets struggle to monetize them, while renters face barriers to access and affordability.\n
+    The lack of a digital, community-driven platform creates friction and limits the potential for shared economic opportunities.\n
+    Renting from strangers can feel risky without verification or a structured platform.
+      `,
+    solution: `
+    The solution was to develop a user-friendly marketplace that connects asset owners with renters, creating a digital ecosystem that fosters trust and accessibility.\n
+    By leveraging technology, Yarlo transforms idle assets into income opportunities for owners while providing renters with affordable and trustworthy options, ultimately creating a win-win situation for all parties involved.\n
+    The platform includes features such as user verification, secure payment processing, and a review system to build trust and ensure a positive rental experience for both owners and renters.\n
+      `,
+    interfaceScreenshots: [
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-home_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-popular-categories.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-all_categories.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-connect_and_earn.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-about_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-mission.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-how_it_works.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-how_it_works2.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-faqs.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-faqs2.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/yarlo_website-footer.png",
     ],
   },
 ];
