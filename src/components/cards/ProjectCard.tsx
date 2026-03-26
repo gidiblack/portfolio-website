@@ -11,15 +11,22 @@ interface ProjectCardProps {
   description: string;
   techStack: string[];
   imageSrc: string;
+  gifSrc?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, techStack, imageSrc }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, techStack, imageSrc, gifSrc }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
-    <Box bgColor={"#0F172A"} borderRadius={12}>
+    <Box
+      bgColor={"#0F172A"}
+      borderRadius={12}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}>
       <Image
         h={["20.5rem", null, "15rem", "18rem", "20.5rem"]}
         w={"full"}
-        src={imageSrc}
+        src={isHovered && gifSrc ? gifSrc : imageSrc}
         alt={title}
         objectFit="cover"
       />

@@ -9,13 +9,26 @@ interface HomeProjectCardProps {
   description: string;
   techStack: string[];
   imageSrc: string;
+  gifSrc?: string;
 }
 
-const HomeProjectCard: React.FC<HomeProjectCardProps> = ({ id, title, description, techStack, imageSrc }) => {
+const HomeProjectCard: React.FC<HomeProjectCardProps> = ({ id, title, description, techStack, imageSrc, gifSrc }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
     <Link href={`${ROUTES.projects}/${id}`}>
-      <Box _hover={{ transform: "scale(1.02)", transition: "transform 0.2s" }}>
-        <Image borderRadius={16} h={"20rem"} w={"full"} src={imageSrc} alt={title} objectFit="cover" />
+      <Box
+        _hover={{ transform: "scale(1.02)", transition: "transform 0.2s" }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}>
+        <Image
+          borderRadius={16}
+          h={"20rem"}
+          w={"full"}
+          src={isHovered && gifSrc ? gifSrc : imageSrc}
+          alt={title}
+          objectFit="cover"
+        />
         <Flex mt={[4, null, 5, 6]} mb={4} align={"center"} gap={3}>
           {techStack.map((tech, index) => (
             <Box key={index} bgColor={"#1E293B"} borderRadius={6} py={1} px={2}>

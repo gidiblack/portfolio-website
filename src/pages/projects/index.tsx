@@ -125,7 +125,8 @@ const ProjectsPage = () => {
                     title={title}
                     description={description}
                     techStack={techStack}
-                    imageSrc={thumbnailGif ? thumbnailGif : thumbnailImg}
+                    imageSrc={thumbnailImg}
+                    gifSrc={thumbnailGif}
                   />
                 </Box>
               ))}
