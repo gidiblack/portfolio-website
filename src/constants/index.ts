@@ -173,6 +173,147 @@ export const allProjects: IProject[] = [
     ],
   },
   {
+    id: "etap-website",
+    title: "ETAP Digital Website",
+    description:
+      "ETAP transforms car insurance from a bureaucratic hassle into a fast, flexible, and rewarding experience. By combining instant coverage, rapid claims, and safe-driving incentives, it solves the inefficiencies of traditional insurance while empowering drivers with control and savings.",
+    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-hero.png",
+    thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-screen_capture-ezgif.gif",
+    techStack: ["Next.js", "TypeScript"],
+    liveDemoLink: "https://etapinsure.com/",
+    type: "web",
+    overview: [
+      {
+        label: "Role",
+        value: "Frontend Developer",
+      },
+      {
+        label: "Client",
+        value: "ETAP Digital",
+      },
+      {
+        label: "Timeline",
+        value: "3 weeks",
+      },
+      {
+        label: "Tech Stack",
+        value: "Next.js, TypeScript",
+      },
+    ],
+    engine: [
+      {
+        label: "Frontend Logic",
+        value: "Next.js, TypeScript",
+      },
+    ],
+    challenge: `
+    Traditional car insurance is slow, paperwork-heavy, and inconvenient.\n
+    Claims processing often takes days or weeks, leaving drivers stranded.\n
+    Premiums are rigid, not reflecting individual driving behavior or lifestyle.\n
+    Drivers lack tools to verify documents or track their driving habits.\n
+    `,
+    solution: `
+    Instant Coverage: Get insured in 90 seconds using just a vehicle plate number.\n
+    Fast Claims: Verified claims are processed within 3 minutes.\n
+    Flexible Plans: Options range from annual to short-term (1–28 days), tailored to lifestyle needs.\n
+    Smart Pricing: Personalized premiums that reward safe driving with lower costs.\n
+    Driving Insights: Telematics-based feedback on acceleration, braking, speeding, etc., helping drivers improve and save.\n
+    Rewards System: Safe Driving Points can be exchanged for vouchers, fuel, cinema tickets, and more.\n
+    Document Verification: Free tool to spot fake vehicle documents quickly.\n
+    Customer-Friendly Policies: Cancel anytime without fees, with always-on support.\n
+    `,
+    interfaceScreenshots: [
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-vehicles.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-insurance-cover.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-driving_instincts.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-manage_everything.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-verify_docs.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-customer_service.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-claims_hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-claims_steps.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-get_insured.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-get_insured-step2.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-premiums.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-how_it_works.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-how_it_works-steps.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-auto_reg.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-lifestyle.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-sdp_vouchers.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-web-more_than.png",
+    ],
+  },
+  {
+    id: "etap-mobile-app",
+    title: "ETAP Digital Mobile App",
+    description:
+      "ETAP transforms car insurance from a bureaucratic necessity into a fast, flexible, and rewarding experience. By combining instant coverage, rapid claims, and gamified safe-driving rewards, it solves the inefficiencies of traditional insurance while motivating drivers to be safer and more engaged.",
+    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-dashboard.png",
+    thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-screen_record_ezgif.gif",
+    techStack: ["React Native", "TypeScript"],
+    liveDemoLink: "https://apps.apple.com/us/app/etap/id1565950437",
+    type: "mobile",
+    overview: [
+      {
+        label: "Role",
+        value: "Mobile Developer",
+      },
+      {
+        label: "Client",
+        value: "ETAP Digital",
+      },
+      {
+        label: "Timeline",
+        value: "6 months",
+      },
+      {
+        label: "Tech Stack",
+        value: "React Native, TypeScript",
+      },
+    ],
+    engine: [
+      {
+        label: "Frontend Logic",
+        value: "React Native, TypeScript",
+      },
+      {
+        label: "API Integration",
+        value: "Node.js",
+      },
+      {
+        label: "Database",
+        value: "AWS",
+      },
+    ],
+    challenge: `
+    Insurance is slow and rigid: Traditional car insurance often requires paperwork, long wait times, and fixed annual plans.\n
+    Claims are frustrating: Drivers face delays and uncertainty when filing claims.\n
+    No incentive for safe driving: Good drivers pay the same premiums as risky ones, with no rewards for responsible behavior.\n
+    Lack of engagement: Insurance feels like a chore, not something drivers actively benefit from.\n
+    `,
+    solution: `
+    Instant Insurance: Users can insure their car in under 90 seconds directly from the app.\n
+    Flexible Coverage: Options range from short-term (1–28 days) to annual plans, tailored to lifestyle needs.\n
+    Fast Claims: Verified claims are processed in minutes, not weeks.\n
+    Driving Insights: The app tracks speed, braking, acceleration, and phone handling, giving drivers a score and feedback to improve.\n
+    Safe Driving Points (SDP): Earn points for smooth driving, which can be redeemed for gifts, vouchers, fuel, or tickets.\n
+    Gamification: Leaderboards rank drivers by SDP, encouraging friendly competition and consistent safe driving.\n
+    Policy Management: Users can add cover, view policy details, and get reminders when insurance is about to expire.\n
+    Trip Tracking: Detailed trip history and activity graphs help drivers monitor usage and performance.\n
+    `,
+    interfaceScreenshots: [
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-dashboard.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-garage.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-trips.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-trip_details.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-leaderboard.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-create_league.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-driving_points.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-referrals.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/etap-mobile-map.png",
+    ],
+  },
+  {
     id: "etap-enterprise-dashboard",
     title: "ETAP Fleet Management Dashboard",
     description:
@@ -227,6 +368,71 @@ export const allProjects: IProject[] = [
       "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-add_driver.png",
       "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-signup.png",
       "https://ik.imagekit.io/gideonimgkit/porfolio/etap-enterprise-capture_reminder.png",
+    ],
+  },
+  {
+    id: "veendhq-website",
+    title: "VeendHQ Website",
+    description:
+      "VeendHQ transforms lending in Nigeria by making credit fast, flexible, and accessible. It eliminates the barriers of traditional banking, offering tailored financial solutions that empower individuals, civil servants, and businesses to meet urgent needs and pursue opportunities confidently.",
+    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-hero.png",
+    thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-screen_capture-ezgif.gif",
+    techStack: ["Next.js", "TypeScript"],
+    liveDemoLink: "https://veendhq.com/",
+    type: "web",
+    overview: [
+      {
+        label: "Role",
+        value: "Frontend Developer",
+      },
+      {
+        label: "Client",
+        value: "VeendHQ",
+      },
+      {
+        label: "Timeline",
+        value: "6-7 weeks",
+      },
+      {
+        label: "Tech Stack",
+        value: "Next.js, TypeScript",
+      },
+    ],
+    engine: [
+      {
+        label: "Frontend Logic",
+        value: "Next.js, TypeScript",
+      },
+      {
+        label: "API Integration",
+        value: "Node.js",
+      },
+      {
+        label: "Database",
+        value: "AWS",
+      },
+    ],
+    challenge: `In Nigeria, access to credit is often hindered by bureaucratic processes, lack of collateral, and rigid repayment terms.\n
+    The challenge was to create a digital platform that simplifies lending, making it fast, flexible, and accessible to a wide range of users, including individuals, civil servants, and businesses.\n
+     Traditional banking systems often exclude those with urgent financial needs or non-traditional credit profiles, creating a gap in financial inclusion.\n
+     `,
+    solution: `The solution was to develop a user-friendly website that offers tailored financial solutions, eliminating traditional barriers.\n
+    By leveraging technology, VeendHQ provides a seamless lending experience that empowers users to meet urgent needs and pursue opportunities confidently.\n
+     The platform streamlines the application process, offers flexible repayment options, and uses alternative data for credit assessment, making credit accessible to a broader audience.\n
+     `,
+    interfaceScreenshots: [
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-partners.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-faqs.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-get_assistance.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-why_veend.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-why_veend2.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_lend-easy.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-web_loan.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-ussd.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-payroll_loans.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-bnpl.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/veendhq-website_home-customized_products.png",
     ],
   },
 ];
