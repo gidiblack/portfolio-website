@@ -22,6 +22,77 @@ interface Item {
 
 export const allProjects: IProject[] = [
   {
+    id: "tochy-emereole",
+    title: "Tochy Emereole Portfolio",
+    description:
+      "The professional hub of Tochy Emereole, a Fractional CMO and marketing consultant specializing in growth-stage companies across EMEA, LATAM, Africa, and North America. It positions her as an expert in revenue architecture, AI-powered growth systems, and multi-market go-to-market strategies. The site highlights her portfolio, testimonials, resources, and thought leadership, emphasizing her ability to build predictable, scalable revenue engines for fintech, SaaS, e-commerce, and edtech companies. It solves the common consultant challenge of proving value by combining storytelling, data, and client voices.",
+    thumbnailImg: "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-hero.png",
+    thumbnailGif: "https://ik.imagekit.io/gideonimgkit/porfolio/ezgif.com-video-to-gif-converter.gif",
+    techStack: ["WordPress", "HTML", "CSS", "JavaScript"],
+    liveDemoLink: "https://tochyemereole.com/",
+    type: "web",
+    overview: [
+      {
+        label: "Role",
+        value: "Frontend Developer",
+      },
+      {
+        label: "Client",
+        value: "Tochy Emereole",
+      },
+      {
+        label: "Timeline",
+        value: "2 months",
+      },
+      {
+        label: "Tech Stack",
+        value: "WordPress, HTML, CSS, JavaScript",
+      },
+    ],
+    engine: [
+      {
+        label: "Frontend Logic",
+        value: "WordPress, HTML, CSS, JavaScript",
+      },
+      {
+        label: "API Integration",
+        value: "PHP",
+      },
+      {
+        label: "Database",
+        value: "MySQL",
+      },
+    ],
+    challenge: `Presenting highly technical growth strategies (AI workflows, attribution models, GTM frameworks) in a way that is accessible to executives and founders.\n
+    Communicating credibility across diverse regions (Africa, EMEA, LATAM, NA) without overwhelming visitors.\n
+    Marketing consultants often struggle to prove ROI clearly.\n
+    Combining Tochy’s personal leadership style with professional consulting services.`,
+    solution: `Layered content—short, bold statements for quick impact, followed by detailed case studies and testimonials for depth.\n
+    Integrated regional success stories and testimonials, showing adaptability to different markets.\n
+    Emphasize data-driven case studies (e.g., scaling Quidax API products to 95% of company revenue) and testimonials with measurable outcomes, building trust.\n
+    Blend personal testimonials with structured service offerings, creating both relatability and authority.`,
+    interfaceScreenshots: [
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-system.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-choices.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-system.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-newsletter.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-testimonials.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-portfolio.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-resources.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-portfolio.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-newsletter.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-portfolio-blog-post.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-portfolio-hero.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-portfolio-overview.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-portfolio-phases.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-portfolio-campaigns.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-portfolio-stats.png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-portfolio-stats(1).png",
+      "https://ik.imagekit.io/gideonimgkit/porfolio/tochy-emereole-web-homepage-choices.png",
+    ],
+  },
+  {
     id: "lxpath-web-app",
     title: "LxPath Web App",
     description:
