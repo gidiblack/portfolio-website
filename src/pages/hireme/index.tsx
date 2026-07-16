@@ -16,7 +16,7 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import Button from "@/components/ui/button";
-import HeroSnippet from "@/assets/stack-snippet.png";
+import Headshot from "@/assets/gidi-headshot.png";
 import { BiDownload } from "react-icons/bi";
 import { GoCodeSquare } from "react-icons/go";
 import { IoMdAnalytics } from "react-icons/io";
@@ -300,10 +300,11 @@ const HireMePage = () => {
               justifyContent={"center"}
               alignItems={"center"}>
               <Image
-                src={HeroSnippet.src}
+                src={Headshot.src}
                 w={"full"}
-                h={["20rem", null, "21.5rem", "22.5rem", "24rem"]}
-                alt={"code snippet with tech stacks and role"}
+                h={["24rem", null, "36rem", "30rem", "35rem"]}
+                alt={"headshot of Gideon"}
+                objectPosition={"top"}
               />
             </Flex>
           </SimpleGrid>
